@@ -1,0 +1,104 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "UCD Centre of Expertise" %}
+{% set pageDescription = "Guidance, tools and shared practice to help NHS teams use user-centred design to improve services." %}
+
+
+{% block content %}
+<main id="maincontent" role="main">
+
+  <section class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero__wrapper app-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-4">UCD Centre of Expertise</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Find guidance, patterns and practical support for designing NHS services around user needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nhsuk-section">
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <p>The UCD Centre of Expertise brings together the main service manual resources teams use to research, design, write and improve digital services.</p>
+          <p>Use this page to get started with the essentials, find established patterns and connect with the wider NHS service community.</p>
+        </div>
+      </div>
+
+      <ul class="nhsuk-grid-row nhsuk-card-group nhsuk-u-margin-top-4">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            heading: "Start with the service standard",
+            headingSize: "m",
+            description: "Understand the standard that underpins good NHS service design and delivery.",
+            href: "/standards-and-technology/service-standard",
+            clickable: true
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            heading: "Use the design system",
+            headingSize: "m",
+            description: "Build with tested components, styles and patterns for NHS services.",
+            href: "/design-system",
+            clickable: true
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            heading: "Create clear content",
+            headingSize: "m",
+            description: "Write and structure content so people can understand and act on it quickly.",
+            href: "/content",
+            clickable: true
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            heading: "Design for accessibility",
+            headingSize: "m",
+            description: "Make sure services work for people with different access needs.",
+            href: "/accessibility",
+            clickable: true
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            heading: "Join the community",
+            headingSize: "m",
+            description: "Share insight, propose improvements and learn from other teams.",
+            href: "/community-and-contribution",
+            clickable: true
+          }) }}
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            heading: "Get support",
+            headingSize: "m",
+            description: "Contact the service manual team if you need help or want to discuss your work.",
+            href: "/get-in-touch",
+            clickable: true
+          }) }}
+        </li>
+      </ul>
+
+      <hr class="nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-6">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h2>What you can do here</h2>
+          <ul>
+            <li>find established guidance for research, interaction design, content design and accessibility</li>
+            <li>reuse proven NHS patterns and components instead of starting from scratch</li>
+            <li>connect your team with the wider community and service manual support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
