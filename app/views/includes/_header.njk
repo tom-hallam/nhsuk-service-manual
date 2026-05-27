@@ -21,12 +21,20 @@
             href: "/design-system"
           },
           {
+            text: "User Research",
+            href: "/user-research"
+          },
+          {
             text: "Content guide",
             href: "/content"
           },
           {
             text: "Accessibility",
             href: "/accessibility"
+          },
+          {
+            text: "AI",
+            href: "/artificial-intelligence"
           },
           {
             text: "Community and contribution",
@@ -66,6 +74,12 @@
           active: (pageSection === "Design system" and subSection)
         },
         {
+          text: "User Research",
+          href: "/user-research",
+          current: pageTitle === "User Research",
+          active: false
+        },
+        {
           text: "Content guide",
           href: "/content",
           current: (pageSection === "Content guide" and landingPage === true),
@@ -76,6 +90,12 @@
           href: "/accessibility",
           current: (pageSection === "Accessibility" and landingPage === true),
           active: (pageSection == "Accessibility" and landingPage != true)
+        },
+        {
+          text: "AI",
+          href: "/artificial-intelligence",
+          current: pageTitle === "Artificial Intelligence",
+          active: false
         },
         {
           text: "Community and contribution",
