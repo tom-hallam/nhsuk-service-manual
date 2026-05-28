@@ -1,0 +1,89 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Standards to follow" %}
+{% set pageSection = "Artificial intelligence" %}
+{% set pageUrl = "/artificial-intelligence/standards-to-follow" %}
+{% set hideDescription = true %}
+{% set hideContact = "true" %}
+
+{% block beforeContent %}
+  {% include "artificial-intelligence/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <section>
+    <h2>UK government guidance</h2>
+    <ul>
+      <li>
+        <p><strong>Updated Standards AI Guidance (Feb 2026)</strong></p>
+        <p>As we see more and more Services that utilise AI the service standard has been updated to be clearer about requirements around the use of generative artificial intelligence (AI) within services:</p>
+        <ul>
+          <li>
+            <p><a href="https://www.gov.uk/service-manual/service-standard/point-2-solve-a-whole-problem" target="_blank">Point 2, ‘Solve a whole problem for users’</a>, is clearer that not designing services around technologies includes not designing them around AI technologies. And that checking for existing solutions includes existing AI solutions</p>
+          </li>
+          <li>
+            <p><a href="https://www.gov.uk/service-manual/service-standard/point-6-have-a-multidisciplinary-team" target="_blank">Point 6, ‘Have a multidisciplinary team’</a>, now requires service teams using AI in a service to have someone on or available to the team who fully understands how it works and the impact of using it.</p>
+          </li>
+          <li>
+            <p><a href="https://www.gov.uk/service-manual/service-standard/point-11-choose-the-right-tools-and-technology" target="_blank">Point 11, ‘Choose the right tools and technology’</a>, makes it clearer that understanding technologies includes understanding AI technologies. Service teams are also now required to assess the impact of technologies on user experience, inclusion, and the reliability of information and decisions.</p>
+          </li>
+          <li>
+            <p><a href="https://www.gov.uk/service-manual/service-standard/point-14-operate-a-reliable-service" target="_blank">Point 14, Operate a reliable service’</a>, now requires quality assurance testing to not be left to automated tools. Service teams must also now monitor outcomes for users and ethical issues such as bias.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p style="margin-left:40px;">Please look through the <a href="https://www.gov.uk/service-manual/service-standard" target="_blank">Service Standard</a> for more details and please reach out to <a href="/artificial-intelligence/transparency-and-assurance">DHSC Technology Assurance team</a> if you have any questions.</p>
+    <ul>
+      <li>
+        <p><a href="https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html" target="_blank"><strong>Artificial Intelligence Playbook for the UK Government (2025)</strong></a>. Offers a comprehensive framework for using AI across government departments. Includes principles, ethics, governance, risk management, and case studies.</p>
+      </li>
+      <li>
+        <p><a href="https://www.gov.uk/government/publications/guidance-to-civil-servants-on-use-of-generative-ai/guidance-to-civil-servants-on-use-of-generative-ai" target="_blank"><strong>Guidance to civil servants on use of generative AI (2024).</strong></a> Provides principles and expectations for how UK civil servants should use generative AI tools responsibly.</p>
+      </li>
+      <li>
+        <p><a href="https://ai.gov.uk/knowledge-hub/" target="_blank"><strong>AI in government knowledge hub</strong></a>. Provides guidance, practical tools, and real-world case studies to help public sector teams adopt and use AI responsibly. It includes a Use Case Library and a Prompt Library <a href="https://ai.gov.uk/knowledge-hub/prompts/" target="_blank">https://ai.gov.uk/knowledge-hub/prompts/</a>.</p>
+      </li>
+      <li>
+        <p>GOV.UK Technology Code of Practice (<a href="https://www.gov.uk/guidance/the-technology-code-of-practice" target="_blank"><strong>The Technology Code of Practice - GOV.UK</strong></a>).</p>
+      </li>
+      <li>
+        <p><a href="https://www.legislation.gov.uk/uksi/2018/952/contents" target="_blank"><strong>The Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018</strong></a></p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>NHS guidance</h2>
+    <ul>
+      <li>
+        <p><a href="https://nhs.sharepoint.com/sites/CIG/SitePages/DP-Confidential---Using-AI-in-NHS-England.aspx" target="_blank"><strong>Using AI in NHS England</strong></a> (January 2026)</p>
+      </li>
+      <li>
+        <p><a href="https://nhs.sharepoint.com/sites/sites/CIG/SiteAssets/Forms/AllItems.html?id=/sites/CIG/SiteAssets/SitePages/Home/20251216-Generative-AI-Guidance-v1.0.pdf&parent=/sites/CIG/SiteAssets/SitePages/Home" target="_blank"><strong>NHSE AI Acceptable usage policy</strong></a> (December 2025)</p>
+      </li>
+      <li>
+        <p><a href="https://service-manual.nhs.uk/design-system/design-principles"><strong>NHS Design Principles</strong></a></p>
+      </li>
+      <li>
+        <p><a href="https://service-manual.nhs.uk/standards-and-technology/service-standard"><strong>NHS Service Standard</strong></a></p>
+      </li>
+      <li>
+        <p><a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/AI-(dev-tools)-User-Guide.aspx" target="_blank"><strong>Engineering AI Guidance</strong></a> &amp; <a href="https://radar.engineering.england.nhs.uk/index.html" target="_blank"><strong>Tech Radar</strong></a></p>
+      </li>
+      <li>
+        <p><a href="https://www.england.nhs.uk/long-read/artificial-intelligence-ai-and-machine-learning/" target="_blank"><strong>Artificial Intelligence (AI) and Machine Learning Guidance (2023–2025)</strong></a>. Guidance for developing and adopting AI, especially in general practice. Covers use cases, information governance, clinical validation, and workforce readiness.</p>
+      </li>
+      <li>
+        <p><a href="https://transform.england.nhs.uk/information-governance/guidance/artificial-intelligence/" target="_blank"><strong>Artificial intelligence (2025).</strong></a> Focused on using AI in NHSE’s Transformation Directorate. It provides information governance (IG) guidance for using AI lawfully and safely in NHS services. It addresses roles and responsibilities for patients, healthcare workers, and IG professionals, including legal bases, consent, data minimisation, and transparency.</p>
+      </li>
+      <li>
+        <p><a href="https://www.gov.uk/government/calls-for-evidence/regulation-of-ai-in-healthcare" target="_blank"><strong>Regulation of AI (including medical devices) in Healthcare - GOV.UK</strong></a></p>
+      </li>
+      <li>
+        <p><a href="https://www.themdu.com/guidance-and-advice/guides/using-ai-in-primary-care" target="_blank"><strong>Using AI safely and responsibly in primary care - The MDU.</strong></a> This article from the Medical Defence Union (MDU) outlines the safe and responsible use of AI in primary care, emphasizing the growing role of AI in diagnostics, decision support, and administrative tasks. It warns that using AI outside approved governance frameworks can pose significant legal, ethical and professional risks, including data breaches, misinformation and bias.</p>
+      </li>
+    </ul>
+  </section>
+
+{% endblock %}

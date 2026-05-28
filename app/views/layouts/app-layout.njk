@@ -25,7 +25,11 @@
                 {{subSection}}
                 {% endif %}
               {% else %}
+              {% if pageSection == "Artificial intelligence" and pageUrl != "/artificial-intelligence" %}
+              AI hub
+              {% else %}
               {{pageSection}}
+              {% endif %}
               {% endif %}
               <span class="nhsuk-u-visually-hidden"> – </span>
             </span>

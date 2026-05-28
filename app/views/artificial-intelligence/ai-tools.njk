@@ -1,0 +1,218 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Artificial intelligence tools" %}
+{% set pageSection = "Artificial intelligence" %}
+{% set pageUrl = "/artificial-intelligence/ai-tools" %}
+{% set hideDescription = true %}
+{% set hideContact = "true" %}
+
+{% block beforeContent %}
+  {% include "artificial-intelligence/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <section>
+    <h3>Key points:</h3>
+    <ul>
+      <li><strong>Only use NHS England approved tools.</strong></li>
+      <li>This policy applies to ALL user-centred design staff (permanent, contractor, agency or Scheme of Work) who work on any NHS services.</li>
+      <li><strong>Never enter personal, personal identifiable data, or business critical information into any AI tool. </strong>This ensures compliance with IT use policies, engineering standards, accessibility requirements, and enterprise guidelines.</li>
+      <li>Access to generative AI websites is restricted on corporate NHSE machines (<a href="https://nhs.sharepoint.com/sites/CIG/SiteAssets/SitePages/Home/20251216-Generative-AI-Guidance-v1.0.pdf" target="_blank">view acceptable use policy</a>), with the exception of Copilot.<br>You <i>may</i> override the “AI - Site Access Request” warning, however you accept the principles and terms of usage.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Approved tools</h2>
+    <h4>General purpose LLM/AI tools:</h4>
+    <figure>
+      <table>
+        <thead>
+          <tr>
+            <th style="text-align:center;">Tool</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center;">Microsoft Copilot</td>
+            <td>
+              <p>Copilot is Microsoft's AI-powered virtual assistant. It uses large language models (LLMs) to answer your questions using a prompt and response interaction.</p>
+              <p>There are different types of Copilots available at NHSE. For more information on how to use these tools, please see the <strong>Copilot training</strong> running at the moment which goes through this.</p>
+              <p><strong>Microsoft 365 Copilot Chat</strong>: an AI prompt and response experience that’s grounded in the web.</p>
+              <ul>
+                <li>It is available <a href="https://m365copilot.com/" target="_blank">on the web</a> and in Microsoft Edge and integrated in apps like Teams and Outlook.</li>
+                <li>It doesn’t deeply integrate with Microsoft 365 apps for advanced tasks.</li>
+                <li>Everyone working in NHSE can access it.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">Microsoft 365 Copilot</td>
+            <td>
+              <p><strong>Microsoft 365 Copilot desktop application:</strong> includes Copilot Chat functionality plus additional features.</p>
+              <ul>
+                <li>It includes deep integration with Word, Excel, PowerPoint, Outlook and Teams. Access to your organisation’s emails, calendars, OneDrive and SharePoint.</li>
+                <li>Available for people who are part of the trial. Tech services are working to roll out Copilot 365 to the whole of the organisation in the next few weeks.</li>
+              </ul>
+              <figure>
+                <img src="/assets/ai/ai-tools-and-use-cases/1554322515.png" alt="Comparison table of Free Copilot, Copilot Chat, and M365 Copilot features and requirements." title="Comparison table for the different versions of Copilot">
+              </figure>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">Microsoft Copilot Studio</td>
+            <td>
+              <p><strong>Microsoft's</strong> low-code graphical tool that you can use to create agents and connect to other data sources.</p>
+              <ul>
+                <li>Agents let you customise your organisation’s Copilot experience. You can add existing agents already created by others and create your own agents.</li>
+                <li><i>Currently being trialled only by the Central UCD team - if you want to know more about this please contact them at </i><a href="mailto:ucd@nhs.net"><i>ucd@nhs.net</i></a>.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">Microsoft PowerAutomate</td>
+            <td>
+              <p><strong>Azure AI Builder:</strong> Advanced automation tool that supports workflows with AI features</p>
+              <ul>
+                <li>Allows workflows with AI to be deployed alongside OneDrive, SharePoint and Dataverse</li>
+                <li>Evaluate content in documents (e.g. Word, Excel, PowerPoint, PDFs)</li>
+                <li>Integrates with Microsoft tools including: PowerApps, PowerBI, PowerAutomate Desktop, Copilot Studio</li>
+                <li>Requires a premium PowerApps licenses and PowerApps environment which is <a href="https://futureservices.service-now.com/esc?id=sc_cat_item&sys_id=c8dbea6e1b3f9e9033b3dd36b04bcbfe" target="_blank">requested via Tech Services</a></li>
+                <li>Guidance available here: <a href="https://nhs.sharepoint.com/sites/T1510_PowerPlatformHub" target="_blank">PowerPlatformHub</a> &amp; <a href="https://learn.microsoft.com/en-us/power-automate/use-ai-builder" target="_blank">Use AI Builder in Power Automate</a></li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+
+    <h4>Tools and features supporting specific workflows:</h4>
+    <figure>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2"><strong>Writing and transcription</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center;">Microsoft Word</td>
+            <td>
+              <p>Microsoft Word has functionality that can help improve content without the need for AI. <a href="https://www.microsoft.com/en-us/microsoft-365/microsoft-editor" target="_blank">Microsoft Editor</a> can assist you with spelling and grammar checking, and polishing your writing style.</p>
+              <p>Also has a transcription service - you upload the file, and it generates a high-quality transcript. This is regarded as less accurate than the MS Teams transcription functionality.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">Microsoft Teams</td>
+            <td>
+              <p>Produces transcripts when calls are recorded and the transcription is turned on. It is OK to continue to use this but please don’t upload these full transcripts into AI tools, as stated previously in this guidance.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Data analysis and summarisation</strong></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">Microsoft Teams - AI Recap</td>
+            <td>
+              <p><a href="https://support.microsoft.com/en-gb/office/recap-in-microsoft-teams-c2e3a0fe-504f-4b2c-bf85-504938f110ef" target="_blank">Intelligent call recap on Microsoft Teams</a> creates AI-generated recaps of recorded calls. After the meeting has ended you can access AI meeting notes and recommended tasks through the ‘Recap’ tab.</p>
+              <p>Our current stance is that NHSE staff can generate a recap of user research sessions. However, researchers should not use these recaps to form part of their analysis. Researchers are advised to be cautious when using recaps for research because the tool may miss nuance, non-verbal interactions and context.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">Qualtrics</td>
+            <td>
+              <p>Qualtrics is the only NHSE approved survey tool. <a href="https://www.qualtrics.com/support/survey-platform/sp-administration/artificial-intelligence-ai-administration/" target="_blank">Qualtrics offers a variety of AI features</a>, however many of these are not currently available in NHSE.</p>
+              <p><strong>Qualtrics TextiQ </strong>is the Qualtics text analysis tool. It allows you to assign topics to feedback received, perform sentiment analysis, and report results with dynamic widgets. If you have a Qualtrics license, you can use TextiQ for analysing open ended questions. On surveys with over 500 submissions, TextiQ can suggest categories and automatically tag data as the survey gets more responses.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">Optimal Workshop AI</td>
+            <td>
+              <p>Optimal Workshop has AI features to assist with simplifying questions and analysis. Refer to the principles around using AI for User Research when performing any kind of analysis.</p>
+              <p>The <strong>"question simplification" feature</strong> can help when you are struggling with phrasing or how to phrase a sensitive topic and colleagues are not available. However, please ensure you do not use this as a default mechanism to check your questions. Researchers will be much better at recommending nuanced, unambiguous language to use.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Prototyping</strong></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><a href="/artificial-intelligence/using-ai-to-support-design#prototyping-in-figma">Figma Make</a></td>
+            <td>
+              <p>Figma Make is an AI-feature that can create a prototypes using Prompts rather than manually creating prototypes.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;"><a href="/artificial-intelligence/using-ai-to-support-design#how-to-prototype-in-code">GitHub Copilot</a></td>
+            <td>
+              <p>GitHub’s automated code-review and in-line suggestions tool. GitHub is listed in the approved tools for hosting in the <a href="https://radar.engineering.england.nhs.uk/index.html" target="_blank">Tech Radar</a>.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+  </section>
+
+  <section>
+    <h3>Safe exploration and evaluation of new AI tools</h3>
+    <p>To support learning, development and innovation, we do encourage safe exploration and evaluation of new AI tools. However, this must be done in accordance with our IT policies, within a controlled process with clear evaluation criteria, and e.g. only use data already available on the public internet, not corporate or NHS data (this includes your own notes and documents).</p>
+    <p>For example:</p>
+    <ul>
+      <li>Researchers compared the performance of ChatGPT vs. other LLMs for extracting data from interviews. The data used for the purpose of this evaluation were case studies already available on the public internet.</li>
+      <li>A designer needed some artwork to include in an external presentation. They used general prompts that did not contain any corporate data to ask the AI to generate suitable background images. They also checked with the AI that it did not break any Copyright issues before using it.</li>
+    </ul>
+
+    <h3>How to choose an AI tool?</h3>
+    <p>AI models are trained using data. AI models can suffer from data leakage, depending on their intended mode of operation.</p>
+    <p>The <a href="https://www.govx.digital/hubfs/AI_Playbook_for_the_UK_Government__12_02_.pdf.pdf" target="_blank">Artificial Intelligence Playbook for the UK government</a> recommends asking the following key questions when deciding which AI tool to use:</p>
+    <ul>
+      <li>Where is your data being sent and how is it being processed?</li>
+      <li>Is your data being used to train future models?</li>
+      <li>How long is your data being retained?</li>
+    </ul>
+
+    <h2>Using a new tool</h2>
+    <p>Before implementing or trialling any product, or if you want to procure enterprise licenses for an AI tool, you need to follow the new <a href="https://nhs.sharepoint.com/sites/X26_URPG/SitePages/request-new-tooling-software.aspx?source=https%3a//nhs.sharepoint.com/sites/X26_URPG/SitePages/Forms/AllPages.aspx" target="_blank">software request process.</a> Getting new software approved, especially if it is paid, will likely involve quite a lengthy process which includes getting approval from:</p>
+    <ul>
+      <li>Getting Approval To Spend (GATS)</li>
+      <li>Business Case (Financial and Commercial)</li>
+      <li>Information Governance</li>
+      <li>Cyber-security</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools that are not Approved</h2>
+    <ul>
+      <li><strong>All tools used for NHS work</strong> must be approved by Information Governance (IG), Cybersecurity, and Finance, to ensure NHSE compliance and security.</li>
+      <li>This is not an exhaustive list. Tools that are not listed should not be considered automatically approved. We have focused on the most common tools that are relevant to research and design.</li>
+    </ul>
+
+    <h3>ChatGPT (OpenAI)</h3>
+    <h4>ChatGPT (free)</h4>
+    <p>You cannot use the free version of ChatGPT when doing any type of NHSE-related work. The tool is not supported by NHS IT. There is currently a lack of transparency over how data is being used or stored. Unless you opt out, inputted data will be used to train future versions of the model.</p>
+    <h4>ChatGPT Enterprise (paid)</h4>
+    <p>The Enterprise version is more secure compared to the free version. It includes Enterprise-level security and controls, System for Cross-domain Identity Management, user analytics, domain verification, and role-based access controls.</p>
+    <p>However, there are currently no Enterprise licenses available in NHSE for ChatGPT. If you want to procure Enterprise licenses you need to follow the new software request process.</p>
+
+    <h3>NotebookLM (Google)</h3>
+    <p>Grounds its responses only in the documents, web pages, or videos you upload. It highlights exact references in your materials, showing where information came from. It should therefore avoid hallucinations by sticking strictly to your content.</p>
+    <h4>NotebookLM (free)</h4>
+    <p>You cannot use the free version of NotebookLM when doing any type of NHSE-related work. The tool is not supported by NHS IT. NotebookLM does not use personal data to train the Gemini model.</p>
+    <h4>NotebookLM for enterprise (paid) - Via procurement process</h4>
+    <p>The Enterprise version is more secure compared to the free version. It includes additional privacy and security features like Virtual Private Cloud Service Controls to protect sensitive data from unauthorized access or data exfiltration. It also includes Identity and Access Management controls which can make sure that the right people have the right access at the right time.</p>
+    <p>However, there are currently no Enterprise licenses available in NHSE for NotebookLM.</p>
+
+    <h3>Microsoft Clipchamp</h3>
+    <p>Clipchamp is currently not permitted for use because it includes AI-powered features, and using it would involve sharing personal data with an AI service. If you need to edit a video, you can use DaVinci Resolve, which is available through NHSE's Company Portal.</p>
+
+    <h3>Mural AI</h3>
+    <p>Mural is an approved whiteboard tool in NHSE, together with Microsoft Whiteboard. Mural has some incorporated AI features. However, these AI features are not currently available in NHSE.</p>
+
+    <h3>GitHub CoPilot</h3>
+    <p>Personal paid accounts are not approved due to data security risks and insufficient enterprise safeguards. See process for requesting an <a href="http://localhost:3000/artificial-intelligence/using-ai-to-support-design#how-to-prototype-in-code">enterprise GitHub Copilot account.</a></p>
+
+    <h3>Claude.ai</h3>
+    <p>Personal paid accounts are not approved due to data security risks and insufficient enterprise safeguards.</p>
+
+  </section>
+{% endblock %}

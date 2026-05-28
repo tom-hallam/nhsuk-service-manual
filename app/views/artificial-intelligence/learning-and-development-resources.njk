@@ -1,0 +1,52 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Learning and development resources" %}
+{% set pageSection = "Artificial intelligence" %}
+{% set pageUrl = "/artificial-intelligence/learning-and-development-resources" %}
+{% set hideDescription = true %}
+{% set hideContact = "true" %}
+
+{% block beforeContent %}
+  {% include "artificial-intelligence/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <section>
+    <h2>Upcoming training events</h2>
+    <p>More training events:</p>
+    <ul>
+      <li><a href="https://nhs.sharepoint.com/sites/SW/SitePages/Upcoming-Copilot-Training-Sessions.aspx" target="_blank">Upcoming Copilot training sessions</a></li>
+      <li><a href="https://aipsweek.digileaders.com/" target="_blank">AI Public Sector Week 2026</a></li>
+      <li><a href="https://nhs.sharepoint.com/sites/PeopleDirectorate/SitePages/Increase-your-confidence-and-skills-with-One-Big-Thing%E2%80%99s-AI-for-All.aspx" target="_blank">Increase your confidence and skills with One Big Thing’s AI for All</a></li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>Recommended courses</h2>
+    <ul>
+      <li><a href="https://aiskillshub.org.uk/aiskillsboost/coursecatalogue/" target="_blank">Course Catalogue - AI Skills Hub</a></li>
+      <li><a href="https://www.youtube.com/watch?v=03bJ8BcYs1c" target="_blank">Thinking Critically About AI in Healthcare - Lecture 1 - YouTube</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/copilot/" target="_blank">Learn how to use Microsoft Copilot | Microsoft Learn</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/" target="_blank">Introduction to generative AI and agents - Training | Microsoft Learn</a></li>
+      <li><a href="https://www.microsoft.com/en-us/power-platform/training-workshops#carousel-oc1af8-4" target="_blank">Power Platform in a Day Workshops | Microsoft Power Platform</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/power-automate/use-ai-builder" target="_blank">Use AI Builder in Power Automate - Power Automate | Microsoft Learn</a></li>
+      <li><a href="https://www.microsoft.com/en-us/events/category/microsoft-virtual-training-days?filters=product:microsoft-power-platform,primary-language:english&scenario=mvtd" target="_blank">Microsoft Virtual Training Days | Microsoft Events</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Recommended reading</h2>
+    <ul>
+      <li><a href="https://nhsx.github.io/ai-dictionary" target="_blank">NHS AI Dictionary</a>. An online glossary that explains key terms and concepts related to AI in healthcare. It’s designed to help NHS staff and partners understand AI terminology in a clear, accessible way.</li>
+      <li><a href="https://digital.nhs.uk/services/ai-knowledge-repository" target="_blank">NHS AI knowledge repository.</a> Managed by NHS England AI Team. It includes helpful resources and relevant case studies.</li>
+      <li><a href="https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-025-03118-0" target="_blank">Evaluating gender bias in large language models in long-term care | BMC Medical Informatics and Decision Making</a>. This research shows evidence that male summaries of long-term care records emphasized physical and mental health more and used more direct language, whereas female summaries often downplayed needs. These disparities could affect care allocation, underscoring the importance of evaluating bias in LLMs. The paper also offers a reproducible framework for assessing such bias in healthcare applications.</li>
+      <li><a href="https://www.ncsc.gov.uk/collection/machine-learning-principles" target="_blank">Machine learning principles</a>. Provide guidance for developers, engineers and decision-makers on how to design, develop, deploy and operate machine learning systems securely.</li>
+      <li><a href="https://www.promptdojo.com/p/the-five-step-framework-for-crafting-killer-prompts" target="_blank">The Five-Step Framework for Crafting Great Prompts</a>. You can also chat to Copilot Prompt Coach to get help with writing effective prompts.</li>
+    </ul>
+    <figure>
+      <img src="/assets/ai/learning-and-development-resources/3036191292.png" alt="Prompt Coach interface with a sidebar showing agent options like Researcher, Analyst, and Prompt Coach.">
+      <figcaption>You can also chat to Copilot Prompt Coach to get help with writing prompts</figcaption>
+    </figure>
+  </section>
+
+{% endblock %}

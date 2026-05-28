@@ -1,38 +1,118 @@
 {% extends "layouts/app-layout.njk" %}
 
-{% set pageTitle = "Artificial Intelligence" %}
-{% set pageDescription = "How to write for digital NHS services." %}
-{% set pageSection = "Resources" %}
+{% set pageTitle = "Artificial Intelligence and User-Centred Design at NHS England" %}
+{% set pageSection = "Artificial intelligence" %}
+{% set pageUrl = "/artificial-intelligence" %}
 {% set landingPage = true %}
+{% set hideDescription = true %}
 {% set hideContact = "true" %}
+
+{% block beforeContent %}
+  {% include "artificial-intelligence/_breadcrumb.njk" %}
+{% endblock %}
 
 {% block bodyContent %}
 
-  <p>This guide is for anyone creating content for the NHS, to help make things clear and consistent across all of our services.</p>
-  <p>It's meant as a guide, not a rulebook. You're welcome to adapt a style pattern if it does not meet your users' needs.</p>
-  <p>Check the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">GOV.UK A to Z style guide</a> and <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">GOV.UK content design guide</a> for any points of style that you do not find here.</p>
-  <p>If it's not there, talk to colleagues on the <a href="https://app.slack.com/client/TDJTLBAJK/CT2UL6RNJ">#content channel on the service manual public Slack</a> or <a href="mailto:england.service-manual@nhs.net">email the service manual team</a> to see if anyone has any experience of or research insight into the issue.</p>
+  <section>
+    <p>Launched in February 2026, this hub includes the User-Centred Design (UCD) policy and guidance for Artificial Intelligence (AI) usage at NHS England.</p>
+  </section>
 
-  <h2>More about the way we work</h2>
-  <p>Listen to a BBC radio interview about content design and the NHS website.</p>
+  <section>
+    <article>
+      <h3><a href="/artificial-intelligence/ai-policy-and-guidance">Artificial intelligence policy and guidance</a></h3>
+      <ul>
+        <li>Key definitions</li>
+        <li>Principles when using AI</li>
+        <li>Risks of AI use</li>
+        <li>Benefits of AI</li>
+      </ul>
+    </article>
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-one-half">
-      {% call card({
-        image: {
-          src: "/assets/word-of-mouth.jpg"
-        },
-        clickable: true,
-        href: "https://www.bbc.co.uk/programmes/m000dpkc",
-        heading: "Interview: Word of Mouth – NHS language use",
-        headingLevel: 3
-      }) %}
-        <p class="nhsuk-body-s nhsuk-u-secondary-text-colour nhsuk-u-margin-bottom-0"><span class="nhsuk-u-visually-hidden">First aired on: </span>January 2020</p>
-        <p class="nhsuk-body-s nhsuk-u-font-weight-bold">BBC Radio 4 – 28 minutes</p>
-        <p class="nhsuk-card__description">Michael Rosen talks with Sara Wilcox, NHS website content designer, and consultant Dr Hugh Rayner, about the words we choose for the NHS website and for letters consultants write to patients</p>
-      {% endcall %}
-    </div>
-  </div>
+    <article>
+      <h3><a href="/artificial-intelligence/ai-tools">Artificial intelligence tools</a></h3>
+      <ul>
+        <li>Approved tools</li>
+        <li>Tools you cannot use</li>
+        <li>How to request new tools</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><a href="/artificial-intelligence/using-ai-to-support-design">Design with AI</a></h3>
+      <ul>
+        <li>Use AI to support creating prototypes</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><a href="/artificial-intelligence/using-ai-to-support-user-research">User research with AI</a></h3>
+      <ul>
+        <li>Research planning</li>
+        <li>Analyse research data</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><a href="/artificial-intelligence/using-ai-to-support-content-design">Content design with AI</a></h3>
+      <ul>
+        <li>How Tos - Coming soon</li>
+      </ul>
+    </article>
+
+    <p>If your team are <strong>building a new service with AI, or integrating AI,</strong> read:</p>
+
+    <article>
+      <h3><a href="/artificial-intelligence/standards-to-follow">Standards to follow</a></h3>
+      <ul>
+        <li>UK government guidance</li>
+        <li>NHS guidance</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><a href="/artificial-intelligence/transparency-and-assurance">Transparency and Assurance</a></h3>
+      <ul>
+        <li>Assurance processes</li>
+        <li>Information governance</li>
+        <li>Ask for a technical review or second opinion</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <article>
+      <h3><a href="/artificial-intelligence/learning-and-development-resources">Learning and development resources</a></h3>
+      <ul>
+        <li>Training events</li>
+        <li>Reading, videos and courses</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><a href="/artificial-intelligence/get-involved-sharing-good-practice">Get involved sharing good practice</a></h3>
+      <ul>
+        <li>Slack channels</li>
+        <li>Community meets-ups</li>
+        <li>AI for UR Working Group</li>
+        <li>UCD AI Prompt Library</li>
+        <li>Case studies</li>
+        <li>Ongoing Experiments</li>
+        <li>UCD AI backlog</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2 class="nhsuk-u-padding-top-4">Help us improve this guidance</h2>
+    <p>Share insights or feedback and take part in the discussion. We use GitHub as a collaboration space. All the information on it is open to the public.</p>
+    {{ actionLink({
+      text: "Feed back or share insights on GitHub",
+      classes: "nhsuk-u-margin-top-1",
+      href: "https://github.com/nhsuk/nhsuk-service-manual-backlog/issues"
+    }) }}
+    <p>Read more about <a href="/community-and-contribution/feed-back-or-share-insights">how to feed back or share insights</a>.</p>
+    <p>If you have any questions, <a href="/get-in-touch">get in touch</a> with the service manual team.</p>
+  </section>
 
   <div class="app-index-navigation app-u-hide-desktop">
     {% include "includes/_side-nav.njk" %}

@@ -1,0 +1,67 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Transparency and assurance" %}
+{% set pageSection = "Artificial intelligence" %}
+{% set pageUrl = "/artificial-intelligence/transparency-and-assurance" %}
+{% set hideDescription = true %}
+{% set hideContact = "true" %}
+
+{% block beforeContent %}
+  {% include "artificial-intelligence/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <section>
+    <h2>Key points:</h2>
+    <ul>
+      <li>You can generally use <a href="/artificial-intelligence/ai-tools#approved-tools"><u>Approved AI Tools</u></a> in line with the guidance.</li>
+      <li>For use-cases that might be considered higher risk, or that might contradict guidance, you should <a href="#ask-for-technical-support-or-second-opinion"><u>ask for technical support or a second opinion.</u></a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Assurance processes that ALWAYS need to be followed</h2>
+    <ul>
+      <li>Technical reviews and spend approvals if you want to spend any money on an AI Tool (or service) with AI integrated.</li>
+      <li>Standard approvals processes (Technical Review Group Home, GAtS (Get Approval to Spend) service) are needed.</li>
+      <li>Commercial and financial approval.</li>
+      <li>DHSC service technology assurance processes apply for all health services, including those integrated with AI/LLMs. The Gov.uk Service Standard was updated recently to include use of generative AI within services. If you are unsure if your services needs DHSC review, contact <a href="mailto:dhsc.digitaltechcontrols@nhs.net?AI%20Assurance" target="_blank">DHSC Technology Assurance Team</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Information governance</h2>
+    <ul>
+      <li>A new Data Privacy Impact Assessment (DPIA) would be required for any use-case that goes beyond the scope of the existing DPIAs (<a href="https://support.nhs.net/knowledge-base/m365-copilot-data-protection-impact-assessment/" target="_blank">Copilot</a>, GitHub, etc).</li>
+      <li>Services may need a Transparency Policy to show end-users how they process data with AI.</li>
+      <li>Manage sensitive data appropriately - Copilot and Microsoft Graph can return content from all files you can access in shared spaces (SharePoint and Teams). Retention labels alone do not prevent Copilot from accessing or returning a file in search results.</li>
+    </ul>
+
+    <figure>
+      <img src="/assets/ai/transparency-and-assurance/1642412646-Copilot.png" alt="Diagram showing Copilot accessing Microsoft 365 data within user permissions, without changing permissions.">
+      <figcaption>Overview of which data Copilot M365 can access.</figcaption>
+    </figure>
+
+    <ul>
+      <li>It is recommended to add Sensitivity Labels of “Official Sensitive – Internal Use Read Only” to confidential files to prevent Copilot and Microsoft graph from returning this content in search queries.</li>
+    </ul>
+
+    <figure>
+      <img src="/assets/ai/ai-policy-and-guidance/3239281276.png" alt="Adding Sensitivity Labels can stop Copilot from surfacing private data">
+      <figcaption>Adding Sensitivity Labels can stop Copilot from surfacing private data</figcaption>
+    </figure>
+  </section>
+
+  <section id="ask-for-technical-support-or-second-opinion">
+    <h2>Ask for technical support or second opinion</h2>
+    <p>There are many places to get technical feedback or a second opinion about your usage of AI at NHS England, this includes:</p>
+    <ul>
+      <li><a href="/artificial-intelligence/get-involved-sharing-good-practice#join-ai-related-slack-channels">Join relevant AI Slack channels</a></li>
+      <li><a href="mailto:england.ai.team@nhs.net?AI%20Query" target="_blank">Contact NHS England AI Team</a></li>
+      <li><a href="mailto:ucd@nhs.net?subject=AI" target="_blank">Contact UCD Ops Team</a></li>
+      <li><a href="https://futureservices.service-now.com/esc" target="_blank">NHS England IT Service Desk</a> – for tools specific guidance</li>
+      <li>NHS England <a href="mailto:england.ciso@nhs.net">CISO</a> / <a href="mailto:england.dpo@nhs.net">DPO</a></li>
+    </ul>
+  </section>
+
+{% endblock %}

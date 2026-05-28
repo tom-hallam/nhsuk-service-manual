@@ -1,0 +1,125 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Using artificial intelligence to support design" %}
+{% set pageSection = "Artificial intelligence" %}
+{% set pageUrl = "/artificial-intelligence/using-ai-to-support-design" %}
+{% set hideDescription = true %}
+{% set hideContact = "true" %}
+
+{% block beforeContent %}
+  {% include "artificial-intelligence/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <section>
+    <h2>Introduction</h2>
+    <p>Designers are encouraged to experiment with AI tools, referencing this guidance and applying critical thinking throughout the process, and <a href="/artificial-intelligence/get-involved-sharing-good-practice">generously sharing experience, examples, and insights with the community.</a></p>
+    <p>As more designers use AI tools, we expect this guidance to evolve, expand and change over time</p>
+  </section>
+
+  <section>
+    <h2>Create digital prototypes using AI</h2>
+
+    <article>
+      <h3>Opportunities for AI use in prototype creation</h3>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th>Opportunity</th>
+              <th>How you can use AI</th>
+              <th>Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rapid creation of demos, clickable prototypes and mock-ups</td>
+              <td>Using Figma Make you can generate low and mid-fidelity mock-ups to support conversations and ideation</td>
+              <td>Reducing the time it takes to get alignment on ideas and direction</td>
+            </tr>
+            <tr>
+              <td>Allowing non-developers or non-coding designers to participate more directly in creating functional prototypes</td>
+              <td>Using Figma Make, VS Code with GitHub Copilot, or MS Copilot, you can generate code including using the NHS Prototyping Kit</td>
+              <td>“Vibe-coding” can reduce the time taken to create coded prototypes, and increasing the quality of our coded prototypes</td>
+            </tr>
+            <tr>
+              <td>Support designers with ideation</td>
+              <td>Using AI to generate ideas of how to solve problems based on best practice or established patterns from other contexts or countries based on well-crafted prompts</td>
+              <td>Faster idea generation to create a wide range of ideas during the “diverge” part of the Double Diamond.</td>
+            </tr>
+            <tr>
+              <td>Support with coding, especially understanding structure and limitations</td>
+              <td>Asking AI to explain how to compose a view, or to explain the different paradigmatic approaches</td>
+              <td>Reducing the learning curve for designers to create effective prototype code with the NHS Prototyping Kit</td>
+            </tr>
+            <tr>
+              <td>Help with understanding code structure and limitations (i.e. asking AI to explain how to compose a view, or to explain the different paradigmatic approaches, etc.)</td>
+              <td>Asking AI to explain how to compose a view, or to clarify different programming paradigms and architectural approaches. This can be done by prompting AI tools to break down the code, highlight best practices, and outline structural considerations—especially using the NHS Prototyping Kit as a reference.</td>
+              <td>Reduces the learning curve for designers and developers, helping them to create more effective and efficient prototype code. This support leads to better understanding of technical constraints and possibilities, resulting in higher quality prototypes and faster upskilling.</td>
+            </tr>
+            <tr>
+              <td>Speed up coding</td>
+              <td>Enabling Copilot (and others) in VS Code and allowing it to autocomplete lines of code</td>
+              <td>Write code faster, get a working prototype faster</td>
+            </tr>
+            <tr>
+              <td>Troubleshooting bugs in code</td>
+              <td>Asking AI to review code and the error message it has given for faster fixing of code</td>
+              <td>Find and fix bugs faster, get a working prototype faster.</td>
+            </tr>
+            <tr>
+              <td>Review code prototypes against the structured logic of WCAG 2.2, to diagnose potential accessibility issues.</td>
+              <td>Asking AI to review prototype against WCAG2.2 AA standard, or the <a href="https://nhsdigital.github.io/accessibility-checklist/" target="_blank">NHS Accessibility Checklist</a></td>
+              <td>Improve accessibility of prototypes for user research or support production coding to be more accessible.</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </article>
+
+    <article id="how-to-prototype-in-code">
+      <h3>How to prototype in code</h3>
+      <p>Using AI to support design and prototyping is sometimes referred to as ‘vibe coding’ - a fast, intuitive approach where designers or developers enter high-level prompts and receive generated code or prototypes to review and iterate on.</p>
+
+      <h4>Dependencies</h4>
+      <ol>
+        <li>Request GitHub access, see: <a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/GitHub-User---how-to-request-access.aspx" target="_blank">GitHub Users</a></li>
+        <li>Install dependencies from Company Portal: VSCode, GIT, GitHub Desktop</li>
+        <li>Know the basics of coding so you can understand AI output.</li>
+        <li>Learn effective prompting to get AI to generate the results you need. <strong>Tip</strong>: You can use Microsoft Copilot and Github Copilot to support learning how to code and write good prompts.</li>
+      </ol>
+
+      <h4>Getting started</h4>
+      <p>To use AI to assist you in prototyping in code you must use <a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/Tech-Radar---GitHub-Copilot.aspx" target="_blank">GitHub CoPilot</a>.</p>
+      <p>To request access to GitHub CoPilot, see page <a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/AI-Coding-Assistants---User-Guide.aspx#how-can-i-or-my-team-members-get-access-to-github-copilot" target="_blank"><strong>AI Coding Assistants - User Guide</strong></a></p>
+      <p>GitHub Copilot supports a range of models, each with their own capabilities and risks. Check GitHub guidance for <a href="https://docs.github.com/en/copilot/reference/ai-models/supported-models" target="_blank">Supported AI models in GitHub Copilot - GitHub Docs.</a></p>
+      <p>If unsure where to start, Claude models are often considered better models for coding.</p>
+      <p>Using enterprise licence for GitHub Copilot lets us create supportive environments, like training CoPilot to build prototypes with our prototype and front-end kits and pattern libraries, and to check for WCAG 2.2 AA accessibility adherence and highlight any gaps.</p>
+      <p>You should familiarise yourself with <a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/Guidelines-When-Using-GitHub.aspx" target="_blank">Guidelines When Using GitHub</a>, and further information on GitHub, including how to get access and set it up correctly is available at <a href="https://prototype-kit.service-manual.nhs.uk/guides/github/" target="_blank">Store code online with GitHub - NHS prototype kit</a> or at <a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/TechRadar-SourceControl.aspx" target="_blank">Source Control</a>.</p>
+      <p>Add comments in the code to show which parts of the code were AI-generated</p>
+    </article>
+
+    <article id="prototyping-in-figma">
+      <h3>Prototyping in Figma</h3>
+      <p><a href="https://www.figma.com/make/" target="_blank">Figma Make</a> is an AI-feature that can create a prototypes using Prompts rather than manually creating prototypes.</p>
+      <p>To use AI to prototype using Figma, you can use Figma Make. It might be useful for concept ideation.</p>
+      <p>Also if you are not confident coding a prototype using the primary toolset (NHS Prototype Kit, Github, Heroku), then Figma Make may be a suitable compromise.</p>
+      <p>However, there are some limitations to be aware of:</p>
+      <ul>
+        <li>Figma Make prototype won't match the NHS Design System / UI patterns</li>
+        <li>Code output does not integrate with the NHS prototyping kit, and may not be feasible for deploying in live services</li>
+        <li>The code can also be difficult to debug and read</li>
+        <li>Limited accessibility support</li>
+        <li>Data hosted outside of EU - avoid any personal data being uploaded into the tool</li>
+        <li>If credits run out, the team may not be able to further modify their prototype</li>
+      </ul>
+      <p>To get licence to Figma, follow guidance on the <a href="https://nhs.sharepoint.com/:u:/r/sites/X26_URPG/SitePages/get-research-and-design-tools.aspx" target="_blank">Get access to tools and software for research and design</a> on the UCD Centre of Expertise (CoE) SharePoint.</p>
+      <p>Each Figma account has monthly Figma AI credits limit</p>
+      <ul>
+        <li>Full seats have 3,500 credits per month.</li>
+        <li>Free seats have 500 credits per month</li>
+      </ul>
+      <p>Once credits have run out no further credits can be consumed until credits reset for the next month. Unused credits do not carry over.</p>
+    </article>
+  </section>
+{% endblock %}

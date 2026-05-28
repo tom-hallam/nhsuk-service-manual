@@ -8,3 +8,8 @@
   border: 1px solid nhsuk-colour("grey-3");
   width: 100%;
 }
+
+.app-ai-pages .app-pane__main-content img {
+  height: auto;
+  max-width: min(100%, 800px);
+}

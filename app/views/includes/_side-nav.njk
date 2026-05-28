@@ -176,6 +176,19 @@
   { title: "Show and tells", url: "/whats-new/show-and-tells" }
 ] %}
 
+{% set artificialIntelligence = [
+  { title: "AI Hub", url: "/artificial-intelligence" },
+  { title: "Artificial intelligence policy and guidance", url: "/artificial-intelligence/ai-policy-and-guidance" },
+  { title: "Artificial intelligence tools", url: "/artificial-intelligence/ai-tools" },
+  { title: "Using artificial intelligence to support design", url: "/artificial-intelligence/using-ai-to-support-design" },
+  { title: "Using artificial intelligence to support user research", url: "/artificial-intelligence/using-ai-to-support-user-research" },
+  { title: "Using artificial intelligence to support content design", url: "/artificial-intelligence/using-ai-to-support-content-design" },
+  { title: "Standards to follow", url: "/artificial-intelligence/standards-to-follow" },
+  { title: "Transparency and assurance", url: "/artificial-intelligence/transparency-and-assurance" },
+  { title: "Learning and development resources", url: "/artificial-intelligence/learning-and-development-resources" },
+  { title: "Get involved sharing good practice", url: "/artificial-intelligence/get-involved-sharing-good-practice" }
+] %}
+
 <nav class="app-side-nav">
 
   {%- if pageSection == "Standards and technology" %}
@@ -344,6 +357,15 @@
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in whatsNew %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {%- if pageSection == "Artificial intelligence" %}
+    <h2 class="app-side-nav__heading">Artificial intelligence</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in artificialIntelligence %}
+      <li class="app-side-nav__item{% if item.url == pageUrl or item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
   {% endif %}
