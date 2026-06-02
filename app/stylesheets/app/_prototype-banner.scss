@@ -1,7 +1,7 @@
 @use "../vendor/nhsuk-frontend" as *;
 
 .app-prototype-banner {
-  background-color: $nhsuk-yellow-colour;
+  background-color: nhsuk-colour("yellow");
   color: $nhsuk-text-colour;
 }
 
