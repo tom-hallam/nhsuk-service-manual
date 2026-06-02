@@ -1,0 +1,23 @@
+@use "../vendor/nhsuk-frontend" as *;
+
+.app-prototype-banner {
+  background-color: $nhsuk-yellow-colour;
+  color: $nhsuk-text-colour;
+}
+
+.app-prototype-banner__container {
+  align-items: center;
+  display: flex;
+  min-height: 56px;
+  padding: nhsuk-spacing(2) 0;
+}
+
+.app-prototype-banner__content {
+  @include nhsuk-font($size: 19);
+  margin-bottom: 0;
+
+  a {
+    color: inherit;
+    font-weight: 600;
+  }
+}
