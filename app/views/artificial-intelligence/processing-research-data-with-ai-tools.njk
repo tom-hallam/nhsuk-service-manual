@@ -27,7 +27,7 @@
     <figure>
       <img src="/assets/ai/processing-research-data-with-ai-tools/research-data-workflow.png" alt="Recommended workflow for anonymisation, analysis and publication of user research data, in 7 steps. Steps 1 to 4 happen in approved Microsoft environments: store raw research data, AI-assisted anonymisation with approved Microsoft tools (M365 Copilot, Power Automate, Copilot Studio), mandatory human anonymisation review and sign-off, then store human-approved anonymised documents separately. Once anonymisation has been approved, choose an analysis route using the human-approved anonymised documents only: step 5, analysis supported by Microsoft AI tools, or step 6, analysis supported by GitHub Copilot Enterprise (optional). Step 7 is human validation and a publication check for evidence, privacy and accuracy.">
     </figure>
-    <p>Approved Microsoft tools may process raw research data to support anonymisation. A human must review and approve the anonymisation before the data is used for analysis. Both analysis routes use human-approved anonymised documents only.</p>
+    <p>Approved Microsoft tools may process raw research data to support anonymisation. A human must review and approve the anonymisation before the data is used for analysis. Both Microsoft AI analysis and GitHub Copilot Enterprise analysis must use human-approved anonymised data only.</p>
   </section>
 
   <section id="store-raw-research-data">
@@ -46,7 +46,7 @@
       <li>Power Automate, including an approved AI Builder or document-processing workflow</li>
       <li>Copilot Studio, where the use case has an approved NHS England environment, licence, connectors, data-loss-prevention configuration and governance</li>
     </ul>
-    <p>See <a href="/artificial-intelligence/ai-tools">Artificial intelligence tools</a> for the list of approved tools.</p>
+    <p>See <a href="/artificial-intelligence/ai-tools#general-purpose-llm-ai-tools">Artificial intelligence tools</a> for the list of approved tools.</p>
 
     <h3>Anonymise transcripts</h3>
     <p>When anonymising transcripts, apply the appropriate level of anonymisation based on the risk of disclosure and the need to preserve data utility.</p>
@@ -97,7 +97,7 @@
       <li>wider internal sharing, subject to the intended audience and permissions</li>
     </ul>
     <p>The raw source remains subject to its existing access, retention and disposal arrangements. Prompts, responses and AI-created documents may themselves be corporate records and may be searchable or disclosable under subject-access or FOI processes.</p>
-    <p><strong>Raw participant material</strong>, for example raw transcripts, recordings, participant lists, identifiable survey data, photographs containing personal data, pseudonym keys or other identifiable or confidential research material, <strong>must not be used in the AI-analysis stage</strong>.</p>
+    <p><strong>Raw participant material</strong>; e.g. raw transcripts, recordings, participant lists, identifiable survey data, photographs containing personal data, pseudonym keys or other identifiable or confidential research material, <strong>must not be used in the AI-analysis stage</strong>.</p>
 
     <h3>Recommended environments and folder storage pattern</h3>
     <h4>Approved Microsoft 365 research storage</h4>
@@ -208,7 +208,7 @@
       <li>be used as a research repository / insight store library</li>
       <li>be careless about which files you push into GitHub. Only push reusable code, docs and agents to GitHub</li>
     </ul>
-    <p>Avoid pushing project data (research data and findings) into GitHub storage. A minimum approved anonymised dataset may be used for a task, but GitHub must not become the authoritative research repository. Research insights and artefacts <strong>MUST</strong> be stored and shared in SharePoint, Teams or Confluence folders and similar.</p>
+    <p>Avoid pushing project data (research data and findings) into GitHub storage. A minimum approved anonymised dataset may be used for a task, but GitHub must not become the authoritative research repository. Research insights and artefacts <strong>MUST</strong> be stored and shared in SharePoint/Teams/Confluence folders etc.</p>
 
     <h3>GitHub Copilot limitations</h3>
     <ul>
@@ -251,7 +251,7 @@
           </tr>
           <tr>
             <td>.gitignore for local temporary files</td>
-            <td>Useful repository hygiene, for example adding .gitignore exclusions for /ANON-APPROVED and /Outputs folders to prevent temporary research data being uploaded to GitHub.</td>
+            <td>Useful repository hygiene. e.g. add .gitignore exclusions for /ANON-APPROVED and /Outputs folders to prevent temporary research data being uploaded to GitHub.</td>
             <td>Secondary control only</td>
           </tr>
           <tr>
@@ -365,7 +365,7 @@
             <td>UR08</td>
             <td>Overseas GitHub processing</td>
             <td>An anonymised document, prompt or output is processed through non-UK model infrastructure.</td>
-            <td>Use pre-anonymised data only; apply enterprise-approved GitHub models and features; do not represent Zero Data Retention as equivalent to UK processing.</td>
+            <td>Use pre-anonymised data only; apply enterprise-approved models and features; do not represent Zero Data Retention as equivalent to UK processing.</td>
             <td>GitHub administrators / AI user</td>
           </tr>
           <tr>
