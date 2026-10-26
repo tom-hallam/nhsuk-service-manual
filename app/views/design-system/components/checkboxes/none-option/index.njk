@@ -1,8 +1,6 @@
 {% from "checkboxes/macro.njk" import checkboxes %}
 
 {{ checkboxes({
-  idPrefix: "symptoms",
-  name: "symptoms",
   fieldset: {
     legend: {
       text: "Do you have any of these symptoms?",
@@ -13,21 +11,23 @@
   hint: {
     text: "Select all the symptoms you have"
   },
+  idPrefix: "symptoms",
+  name: "symptoms",
   items: [
     {
       value: "sorethroat",
       text: "Sore throat",
-      exclusiveGroup: "symptoms-list"
+      behaviourGroup: "symptoms-list"
     },
     {
       value: "runnynose",
       text: "Runny nose",
-      exclusiveGroup: "symptoms-list"
+      behaviourGroup: "symptoms-list"
     },
     {
       value: "muscleorjointpain",
       text: "Muscle or joint pain",
-      exclusiveGroup: "symptoms-list"
+      behaviourGroup: "symptoms-list"
     },
     {
       divider: "or"
@@ -35,8 +35,8 @@
     {
       value: "none",
       text: "No, I do not have any of these symptoms",
-      exclusive: true,
-      exclusiveGroup: "symptoms-list"
+      behaviour: "exclusive",
+      behaviourGroup: "symptoms-list"
     }
   ]
 }) }}

@@ -1,0 +1,77 @@
+---
+javascript: false
+---
+
+{% from "radios/macro.njk" import radios %}
+{% from "input/macro.njk" import input %}
+
+{% set emailHtml %}
+  {{ input({
+    label: {
+      text: "Email address"
+    },
+    id: "email",
+    name: "email",
+    classes: "nhsuk-u-width-two-thirds"
+  }) }}
+{% endset -%}
+
+{% set phoneHtml %}
+  {{ input({
+    label: {
+      text: "Phone number"
+    },
+    id: "phone",
+    name: "phone",
+    classes: "nhsuk-u-width-two-thirds"
+  }) }}
+{% endset -%}
+
+{% set mobileHtml %}
+  {{ input({
+    label: {
+      text: "Mobile phone number"
+    },
+    id: "mobile",
+    name: "mobile",
+    classes: "nhsuk-u-width-two-thirds"
+  }) }}
+{% endset -%}
+
+{{ radios({
+  fieldset: {
+    legend: {
+      text: "How do you want to be contacted about this?",
+      size: "l",
+      isPageHeading: true
+    }
+  },
+  hint: {
+    text: "Select 1 option"
+  },
+  idPrefix: "contact",
+  name: "contact",
+  items: [
+    {
+      value: "email",
+      text: "Email",
+      conditional: {
+        html: emailHtml
+      }
+    },
+    {
+      value: "phone",
+      text: "Phone",
+      conditional: {
+        html: phoneHtml
+      }
+    },
+    {
+      value: "text",
+      text: "Text message",
+      conditional: {
+        html: mobileHtml
+      }
+    }
+  ]
+}) }}

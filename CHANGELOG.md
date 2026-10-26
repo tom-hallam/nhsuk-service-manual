@@ -1,5 +1,68 @@
 # NHS digital service manual Changelog
 
+## 8.14.0 - 26 August 2026
+
+:new: **New features**
+
+- Update the guidance on Writing NHS messages
+- Update the guidance on how care cards (the pattern for helping users decide when and where to get care) work and how to write content for care cards
+- Add new entries to content guide for "data" and "third party"
+- Add page updates details to service standard points
+
+:wrench: **Maintenance**
+
+- Fix link to table in a card
+
+## 8.13.1 - 19 August 2026
+
+:wrench: **Maintenance**
+
+- Fix do and don't list icons in design system examples
+- Fix increased top margin in design system examples
+
+## 8.13.0 - 17 August 2026
+
+:new: **New features**
+
+- Add sortable, compact, scrollable, striped and reverse tables with guidance
+- Add option for "all" to checkboxes component
+- Add new reference list of override classes
+- Add frontend version number to design system examples and a guide to checking your frontend version
+- Add JavaScript on-off toggle to components that use progressive enhancement
+- Add Coming soon page
+
+:wrench: **Maintenance**
+
+- Fix curly quote example to punctuation section
+- Update character count component to mention new data-count-type
+- Update guidance to get an independent accessibility audit
+- Update wording about terms of use on Start page pattern
+- Update page about the Personal Demographics Service (PDS)
+- Update contribution criteria to reflect current practice
+- Add Eleventy theme to community resources
+- Remove frontend version 10 banner and callouts
+- Move WCAG 2.2 callout content into normal page content
+- Add hero image and restructure service manual home page
+
+## 8.12.1 - 17 June 2026
+
+:wrench: **Maintenance**
+
+- Install latest version of NHS.UK frontend (10.5.2)
+
+## 8.12.0 - 4 June 2026
+
+:new: **New features**
+
+- Add new search input component
+- Add row headers to tables and update guidance on using table headers
+- Add new inline checkboxes feature and guidance
+- Update default example for radios and update guidance about inline radios
+
+:wrench: **Maintenance**
+
+- Update header guidance as logged-in account is now used on public services
+
 ## 8.11.0 - 14 May 2026
 
 :wrench: **Maintenance**

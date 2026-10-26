@@ -63,11 +63,21 @@
 
 {% block afterContact %}
 
- {{ pagination({
+  {{ pagination({
     previous: {
-      labelText: "Point 16",
+      label: "Point 16",
       href: "/standards-and-technology/service-standard-points/16-make-your-service-clinically-safe"
     }
   }) }}
 
+{% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("January 2026") %}
+      <p>Reviewed and updated the standard with the interoperability team, in particular the detail about APIs.</p>
+    {% endcall %}
+
+  {% endcall %}
 {% endblock %}

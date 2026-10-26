@@ -1,11 +1,12 @@
 {% from "character-count/macro.njk" import characterCount %}
 
 {{ characterCount({
-  name: "moreDetail",
-  id: "more-detail",
-  maxwords: 150,
   label: {
     text: "Enter a job description",
     size: "l"
-  }
+  },
+  id: "more-detail",
+  name: "moreDetail",
+  maxlength: 150,
+  countType: "words"
 }) }}

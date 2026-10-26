@@ -10,6 +10,154 @@
 
 {% block bodyContent %}
 
+<h2>August 2026</h2>
+
+{% set accessibilityHtml202608 %}
+<p>Updated <a href="/accessibility/how-to-make-digital-services-accessible#test-throughout-and-consider-an-independent-audit">guidance to get an independent accessibility audit</a></p>
+
+{% endset %}
+
+{% set communityHtml202608 %}
+<p>Added new <a href="/community-and-contribution/coming-soon">Coming soon page</a></p>
+<p>Updated <a href="/community-and-contribution/contribution-criteria">Contribution criteria</a> to reflect current practice</p>
+<p>Added Eleventy theme to <a href="/community-and-contribution/community-resources">Community resources page</a></p>
+
+{% endset %}
+
+{% set contentHtml202608 %}
+<p>Updated guidance on <a href="/content/writing-nhs-messages">Writing NHS messages</a></p>
+<p>Added new entries to content guide for "<a href="/content/a-to-z-of-nhs-health-writing#data">data</a>" and "<a href="/content/a-to-z-of-nhs-health-writing#third-party">third party</a>"</p>
+  
+{% endset %}
+
+{% set designHtml202608 %}
+    <p>Added new features to the <a href="/design-system/components/table">table component</a> including a sortable table, compact, striped, scrolling and reverse (dark background) styles</p>
+    <p>Added an <a href="/design-system/components/checkboxes#all-option">"all" option to the checkboxes component</a></p>
+    <p>Added a <a href="/design-system/styles/override-classes">reference list of override classes</a></p>
+    <p>Updated guidance on how <a href="/design-system/patterns/help-users-decide-when-and-where-to-get-care">care cards (the pattern to help users decide when and where to get care)</a> work and how to write content for care cards</p>
+    <p>Added frontend version number to <a href="/design-system">design system</a> examples and a <a href="/design-system/guides/check-frontend-version">guide to checking your frontend version</a></p>
+    <p>Updated wording about terms of use on <a href="/design-system/patterns/start-page">Start page pattern</a></p>
+    <p>Updated <a href="/design-system/components/character-count">character count component</a> to mention new data-count-type</p>
+    <p>Added JavaScript on-off toggle to components that use progressive enhancement</p>
+    <p>Removed frontend version 10 banner and callouts</p>
+    <p>Moved WCAG 2.2 callout content into normal page content</p>
+{% endset %}
+
+{% set standardHtml202608 %}
+<p>Updated page about <a href="/standards-and-technology/technology/personal-demographics-service-PDS">Personal Demographics Service (PDS)</a></p>
+<p>Added details of updates made to <a href="/standards-and-technology/service-standard">NHS service standard</a> pages since publication</p>
+
+{% endset %}
+
+{% set otherHtml202608 %}
+<p>Added hero image and restructured service manual home page</p>
+
+{% endset %}
+
+
+{{ table({
+  caption: {
+    text: "Updates to the service manual in August 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
+  head: [
+    {
+      text: "Section",
+      width: "one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Accessibility guidance"
+      },
+      {
+        html: accessibilityHtml202608
+      }
+    ],
+    [
+      {
+        text: "Community and contribution"
+      },
+      {
+        html: communityHtml202608
+      }
+    ],
+    [
+      {
+        text: "Content guide"
+      },
+      {
+        html: contentHtml202608
+      }
+    ],
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202608
+      }
+    ],
+    [
+      {
+        text: "Standards and technology"
+      },
+      {
+        html: standardHtml202608
+      }
+    ],
+    [
+      {
+        text: "Other"
+      },
+      {
+        html: otherHtml202608
+      }
+    ]
+  ]
+}) }}
+
+<h2>June 2026</h2>
+
+{% set designHtml202606 %}
+  <p>Added new <a href="/design-system/components/search-input">search input component</a></p>
+  <p>Added row headers to tables and updated <a href="/design-system/components/table#table-headers">guidance on headers on table component page</a></p>
+  <p>Updated guidance on when to use <a href="/design-system/components/header#logged-in-account-information-and-links">logged-in account information and links in header component</a></p>
+  <p>Added new <a href="/design-system/components/checkboxes#inline-checkboxes">inline checkboxes</a> feature and guidance</p>
+  <p>Updated <a href="/design-system/components/radios">radios</a> default example and guidance on inline radios</p>
+{% endset %}
+
+{{ table({
+  caption: {
+    text: "Updates to the service manual in June 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
+  head: [
+    {
+      text: "Section",
+      width: "one-quarter"
+    },
+    {
+      text: "Update"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Design system"
+      },
+      {
+        html: designHtml202606
+      }
+    ]
+  ]
+}) }}
+
+
 <h2>May 2026</h2>
 
 {% set contentHtml202605 %}
@@ -25,12 +173,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in May 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in May 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -73,7 +223,7 @@
 
 {% set designHtml202604 %}
   <p>Updated <a href="/design-system/components/card">card component</a></p>
-  <p>Split out <a href="/design-system/patterns/hub-page">hub page pattern</a> from card component page</a></p>
+  <p>Split out <a href="/design-system/patterns/hub-page">hub page pattern</a> from card component page</p>
   <p>Added section on <a href="/design-system/components/date-input#using-autocomplete-attribute">using autocomplete attribute to date input</a></p>
 {% endset %}
 
@@ -82,12 +232,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in April 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in April 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -132,12 +284,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in March 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in March 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -166,12 +320,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in February 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in February 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -225,12 +381,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in January 2026",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in January 2026",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -271,12 +429,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in November 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in December 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -303,7 +463,7 @@
 {% set designHtml202511 %}
   <p>Added new <a href="/design-system/components/password-input">password input component</a></p>
   <p>Added <a href="/design-system/components/buttons#smaller-buttons">smaller buttons</a></p>
-  <p>Add guidance on <a href="/design-system/components/text-input#codes-and-sequences">codes and sequences for text input</a></p>
+  <p>Added guidance on <a href="/design-system/components/text-input#codes-and-sequences">codes and sequences for text input</a></p>
   <p>Updated guidance on <a href="/design-system/patterns/ask-for-nhs-numbers">asking users for their NHS number</a>, including new dummy NHS number 999 123 4567</p>
   <p>Updated guidance for reverse examples, such as white links on dark backgrounds</p>
   <p>Updated <a href="/design-system/components/select">select component</a> guidance to bring it closer to GOV.UK design system</p>
@@ -312,12 +472,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in November 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in November 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -351,12 +513,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in October 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in October 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -385,12 +549,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in September 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in September 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -432,12 +598,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in August 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in August 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -476,12 +644,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in July 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in July 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -530,12 +700,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in May 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in May 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -572,7 +744,7 @@
   <p>Added <a href="/design-system/styles/typography#breaking-up-long-words">typography helper class and guidance on breaking up long words</a></p>
   <p>Added example of <a href="/design-system/components/table#word-breaks-table">using word-breaks in tables</a></p>
   <p>Updated <a href="/design-system/styles/page-template">page template</a> to use template from nhsuk-frontend, with new Nunjucks options</p>
-  <p>Updated <a href="/design-system/components/table#responsive-table">responsive table</a> to use <a href="/design-system/styles/layout#utility-classes">reading width helper classes</a></p>
+  <p>Updated <a href="/design-system/components/table#responsive-table">responsive table</a> to use <a href="/design-system/styles/layout#override-classes">reading width helper classes</a></p>
 {% endset %}
 
 {% set standardHtml202504 %}
@@ -582,12 +754,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in April 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in April 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -628,12 +802,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in March 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in March 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -676,12 +852,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in February 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in February 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -733,12 +911,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in January 2025",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in January 2025",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -779,12 +959,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in December 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in December 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -814,12 +996,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in November 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in November 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -856,12 +1040,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in October 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in October 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -922,12 +1108,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in September 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in September 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -989,12 +1177,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in July 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in July 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -1029,12 +1219,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in April 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in April 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -1098,12 +1290,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in April 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in April 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -1156,12 +1350,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in January 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in January 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"
@@ -1232,12 +1428,14 @@
 {% endset %}
 
 {{ table({
-  caption: "Updates to the service manual in January 2024",
-  captionClasses: "nhsuk-u-visually-hidden",
+  caption: {
+    text: "Updates to the service manual in January 2024",
+    classes: "nhsuk-u-visually-hidden"
+  },
   head: [
     {
       text: "Section",
-      classes: "nhsuk-u-width-one-quarter"
+      width: "one-quarter"
     },
     {
       text: "Update"

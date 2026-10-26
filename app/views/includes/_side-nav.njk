@@ -19,8 +19,8 @@
 ] %}
 
 {% set dsGuides = [
-  { title: "Updating to v10", url: "/design-system/guides/updating-to-v10" },
-  { title: "Changes to meet WCAG 2.2", url: "/design-system/changes-to-design-system-wcag-2-2" }
+  { title: "Check your frontend version", url: "/design-system/guides/check-frontend-version" },
+  { title: "Updating to version 10", url: "/design-system/guides/updating-to-v10" }
 ] %}
 
 {% set dsDesign = [
@@ -92,6 +92,10 @@
   { title: "Use the NHS Frutiger font", url: "/design-system/styles/use-frutiger-font" }
 ] %}
 
+{% set stylesReference = [
+  { title: "Override classes", url: "/design-system/styles/override-classes" }
+] %}
+
 {% set navigation = [
   { title: "Action link", url: "/design-system/components/action-link" },
   { title: "Back link", url: "/design-system/components/back-link" },
@@ -133,6 +137,7 @@
   { title: "Hint text", url: "/design-system/components/hint-text" },
   { title: "Password input", url: "/design-system/components/password-input" },
   { title: "Radios", url: "/design-system/components/radios" },
+  { title: "Search input", url: "/design-system/components/search-input" },
   { title: "Select", url: "/design-system/components/select" },
   { title: "Text input", url: "/design-system/components/text-input" },
   { title: "Textarea", url: "/design-system/components/textarea" }
@@ -163,6 +168,7 @@
 
 {% set community = [
   { title: "Backlog of components and patterns", url: "/community-and-contribution/backlog-of-components-and-patterns" },
+  { title: "Coming soon", url: "/community-and-contribution/coming-soon" },
   { title: "Feed back or share insights", url: "/community-and-contribution/feed-back-or-share-insights" },
   { title: "Propose a component or pattern", url: "/community-and-contribution/propose-component-pattern" },
   { title: "Develop a component or pattern", url: "/community-and-contribution/develop-component-pattern" },
@@ -243,6 +249,13 @@
     <h2 class="app-side-nav__heading">Styles <span class="nhsuk-u-visually-hidden">navigation</span></h2>
     <ul class="nhsuk-list app-side-nav__list">
     {% for item in styles %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2 class="app-side-nav__heading">Reference <span class="nhsuk-u-visually-hidden">navigation</span></h2>
+    <ul class="nhsuk-list app-side-nav__list">
+    {% for item in stylesReference %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>

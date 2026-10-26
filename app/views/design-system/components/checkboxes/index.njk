@@ -5,7 +5,7 @@
 {% set subSection = "Components" %}
 {% set pageDescription = "Use checkboxes to let users select 1 or more options on a form." %}
 {% set theme = "Form elements" %}
-{% set dateUpdated = "November 2025" %}
+{% set dateUpdated = "August 2026" %}
 {% set backlog_issue_id = "9" %}
 
 {% block beforeContent %}
@@ -13,17 +13,6 @@
 {% endblock %}
 
 {% block bodyContent %}
-  {% call insetText({
-    classes: "nhsuk-u-margin-top-0"
-  }) %}
-    {{ tag({
-      text: "Version 10",
-      classes: "nhsuk-tag--blue nhsuk-u-margin-bottom-2"
-    }) }}
-
-    <h3 id="v10-affects-this-component" class="nhsuk-u-margin-bottom-2">Checkboxes updated in August 2025</h3>
-    <p>See <a href="/design-system/guides/updating-to-v10#checkboxes">breaking code updates to checkboxes in version 10</a></p>
-  {% endcall %}
 
   {{ designExample({
     group: "components",
@@ -31,17 +20,17 @@
     type: "default"
   }) }}
 
-  <h2>When to use checkboxes</h2>
+  <h2 id="when-to-use-checkboxes">When to use checkboxes</h2>
   <p>Use checkboxes when you need to help users:</p>
   <ul>
     <li>select more than 1 option from a list</li>
     <li>toggle a single option on or off</li>
   </ul>
 
-  <h2>When not to use checkboxes</h2>
+  <h2 id="when-not-to-use-checkboxes">When not to use checkboxes</h2>
   <p>Do not use the checkboxes component if users can only choose 1 option from a selection. In this case, use a <a href="/design-system/components/radios">radio</a>.</p>
 
-  <h2>How to use checkboxes</h2>
+  <h2 id="how-to-use-checkboxes">How to use checkboxes</h2>
   <p>Position checkboxes to the left of their labels. This makes them easier to find, especially for users of screen magnifiers.</p>
   <p>Do not pre-select checkbox options as this makes it more likely that users will:</p>
   <ul>
@@ -52,6 +41,20 @@
   <p>Group checkboxes together in a <code>&lt;fieldset&gt;</code> with a <code>&lt;legend&gt;</code> that describes them. You can see an example at the top of this page. The legend is usually a question, like "How do you want to be contacted about this?".</p>
   <p>Read more about using <a href="/design-system/components/fieldset">fieldset</a>.</p>
 
+  <h3 id="inline-checkboxes">Inline checkboxes</h3>
+  <p>In some cases, you can choose to display checkboxes "inline" beside one another (horizontally).</p>
+  <p>Only use inline checkboxes when:</p>
+  <ul>
+    <li>the question only has 2 options</li>
+    <li>both options are short</li>
+  </ul>
+  <p>On small screens such as mobile devices, the checkboxes will still be "stacked" on top of one another (vertically).</p>
+
+  {{ designExample({
+    group: "components",
+    item: "checkboxes",
+    type: "inline"
+  }) }}
 
   <h3 id="checkboxes-with-hint-text">Checkboxes with hint text</h3>
   <p>Unlike with <a href="/design-system/components/radios">radios</a>, users can select more than 1 option from a list of checkboxes. Do not assume that users will know how many options they can select.</p>
@@ -78,15 +81,31 @@
   <p>Remember to start by asking 1 question per page. You might be able to remove the need for a "none" option by asking the user a better question or by <a href="/content/how-to-write-good-questions-for-forms/use-filter-questions-to-route-users">using filter questions</a> to filter users out beforehand.</p>
   <p>Show the "none" option last. Separate it from the other options using a divider, normally the word "or".</p>
   <p>Write a label that repeats the key part of the question. For example, for the question "Do you have any of these symptoms?", say "No, I do not have any of these symptoms". Avoid phrases like "none of the above" because this is a visual reference and might be hard for people who use screen readers to understand.</p>
-  <p>To enable some JavaScript that unchecks all other checkboxes when the user clicks "none", add the <code>data-checkbox-exclusive</code> behaviour to the "none" checkbox.</p>
+  <p>To enable some JavaScript that unchecks all other checkboxes when the user clicks "none", add the <code>data-behaviour="exclusive"</code> behaviour to the "none" checkbox. If you are using the Nunjucks macro, use the <code>behaviour: "exclusive"</code> option instead.</p>
 
   {{ designExample({
     group: "components",
     item: "checkboxes",
-    type: "none-option"
+    type: "none-option",
+    showJavaScriptToggle: true
   }) }}
 
   <p>If JavaScript is unavailable, and a user selects both the "none" checkbox and another checkbox, display an error message.</p>
+
+  <h3 id="all-option">Add an option for "all"</h3>
+
+  <p>You can give users an option to be able to quickly select or unselect all the checkboxes. This checkbox only displays when JavaScript is available.</p>
+
+  <p>Show this option first so that users see it before starting to select each checkbox individually.</p>
+
+  <p>To use it, add the <code>data-behaviour="inclusive"</code> attribute to the checkbox, and add the HTML class <code>nhsuk-frontend-supported-only</code> to its container and any divider that appears after it. If you are using the Nunjucks macro, use the <code>behaviour: "inclusive"</code> option instead.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "checkboxes",
+    type: "all-option",
+    showJavaScriptToggle: true
+  }) }}
 
   <h3 id="conditionally-revealing-question">Conditionally revealing a related question</h3>
   <p>You can add a conditionally revealing related question to checkboxes, so users only see the question when it's relevant to them.</p>
@@ -95,13 +114,14 @@
   {{ designExample({
     group: "components",
     item: "checkboxes",
-    type: "conditional"
+    type: "conditional",
+    showJavaScriptToggle: true
   }) }}
 
   <p>Keep it simple. If you need to add a lot of content, consider showing it on the next page in the process instead.</p>
   <p>Only conditionally reveal questions. Do not show or hide anything that is not a question.</p>
 
-  <h4>Known issues</h4>
+  <h4 id="known-issues">Known issues</h4>
   <p>Users are not always notified when a conditionally revealed question is shown or hidden. This fails <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html">WCAG 2.2 success criterion 4.1.2 name, role, value (W3C)</a>.</p>
   <p>However, GOV.UK found that screen reader users did not have difficulty answering a conditionally revealed question as long as it's simple. It confused users when they conditionally revealed complicated questions.</p>
 
@@ -135,7 +155,20 @@
     <li><a href="https://design-system.service.gov.uk/components/checkboxes#error-messages">GOV.UK design system guidance on error messages for checkboxes</a></li>
   </ul>
 
-  <h2>Research</h2>
+  <h2 id="progressive-enhancement">Progressive enhancement</h2>
+  <p>The checkboxes component <a href="/accessibility/how-to-make-digital-services-accessible#use-progressive-enhancement">uses progressive enhancement</a> and requires JavaScript for enhanced functionality.</p>
+  <p>When JavaScript is not available, conditionally revealed content will be revealed by default and "none" checkboxes will not uncheck all other checkboxes when clicked.</p>
+
+  {{ designExample({
+    group: "components",
+    item: "checkboxes",
+    type: "without-javascript",
+    javascript: false,
+    showJavaScriptToggle: true,
+    showCode: false
+  }) }}
+
+  <h2 id="research">Research</h2>
   <p>Our checkboxes are based on the GOV.UK design system. Read a <a href="https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/">GOV.UK blog post about their updates to radios and checkboxes</a>.</p>
 
 {% endblock %}

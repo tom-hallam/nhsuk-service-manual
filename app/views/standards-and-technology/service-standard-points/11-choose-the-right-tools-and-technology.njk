@@ -72,13 +72,39 @@
 
   {{ pagination({
     previous: {
-      labelText: "Point 10",
+      label: "Point 10",
       href: "/standards-and-technology/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing"
     },
     next: {
-      labelText: "Point 12",
+      label: "Point 12",
       href: "/standards-and-technology/service-standard-points/12-make-new-source-code-open"
     }
   }) }}
 
-  {% endblock %}
+{% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("February 2026") %}
+      <p>Updated to follow GOV.UK and be clearer that understanding technologies includes understanding AI technologies. Service teams are also now required to assess the impact of technologies on user experience, inclusion, and the reliability of information and decisions.</p>
+    {% endcall %}
+
+    {% call update("January 2026") %}
+      <p>Updated and added links.</p>
+    {% endcall %}
+
+    {% call update("May 2025") %}
+      <p>Updated link to information standard DAPB3051, previously DCB3051.</p>
+    {% endcall %}
+
+    {% call update("April 2025") %}
+      <p>Added a new bullet point about use of resources to reflect our design principle about protecting the environment, with related links.</p>
+    {% endcall %}
+
+    {% call update("January 2024") %}
+      <p>Added link to the AI and Digital Regulations Service.</p>
+    {% endcall %}
+
+  {% endcall %}
+{% endblock %}

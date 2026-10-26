@@ -74,15 +74,33 @@
 
 {% block afterContact %}
 
- {{ pagination({
+  {{ pagination({
     previous: {
-      labelText: "Point 8",
+      label: "Point 8",
       href: "/standards-and-technology/service-standard-points/8-iterate-and-improve-frequently"
     },
     next: {
-      labelText: "Point 10",
+      label: "Point 10",
       href: "/standards-and-technology/service-standard-points/10-define-what-success-looks-like-and-be-open-about-how-your-service-is-performing"
     }
   }) }}
 
+{% endblock %}
+
+{% block updateContent %}
+  {% call updates(dateUpdated) %}
+
+    {% call update("February 2026") %}
+      <p>Updated link to information standard DAPB3051.</p>
+    {% endcall %}
+
+    {% call update("May 2025") %}
+      <p>Updated link to information standard DAPB3051, previously DCB3051.</p>
+    {% endcall %}
+
+    {% call update("April 2025") %}
+      <p>Updated to reflect changes made to this GOV.UK standard in December 2024. With links to Secure by Design principles and IBM's MISUSE threat modelling framework. Plus new points on privacy preferences and settings from a working group on domestic abuse and coercive control.</p>
+    {% endcall %}
+
+  {% endcall %}
 {% endblock %}
