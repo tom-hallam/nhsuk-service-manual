@@ -1,0 +1,108 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Get started with GitHub Copilot" %}
+{% set pageSection = "Artificial intelligence" %}
+{% set pageUrl = "/artificial-intelligence/get-started-with-github-copilot" %}
+{% set hideDescription = true %}
+{% set hideContact = "true" %}
+
+{% block beforeContent %}
+  {% include "artificial-intelligence/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <section>
+    <p>You may use GitHub Copilot to assist you in prototyping in code or for processing anonymised research data. It is an automated code-review and in-line suggestions tool. GitHub is listed in the approved tools for hosting code in the <a href="https://radar.engineering.england.nhs.uk/index.html" target="_blank">Tech Radar</a>.</p>
+    <p>This is optional, and can be used alongside other AI/LLM tools and methodologies.</p>
+    <p><a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/Tech-Radar---GitHub-Copilot.aspx" target="_blank">GitHub Copilot</a> is the approved platform for AI-assisted coding. Other standalone coding assistants, such as Claude Code and Codex, are not approved for use. Follow the safeguards described by the Engineering Centre of Expertise in the guidance linked below.</p>
+  </section>
+
+  <section>
+    <h2>Coding… this is all new to me</h2>
+    <p>Coding environments are frequently used in design roles, academic research, quantitative research and data science and analytics teams. However, for many user researchers and colleagues across the wider organisation, they may never have needed to use a coding environment / integrated development environment (IDE) before.</p>
+    <p>It can therefore be quite a steep learning curve, however there are lots of good resources available to support individuals:</p>
+    <ol>
+      <li>
+        <p>It is useful to know some coding basics (HTML, CSS, JavaScript, Python and PowerShell) so you can understand Copilot's actions and output.</p>
+        <p>Review coding and AI courses on Pluralsight, the Workforce Training and Education site or YouTube.</p>
+      </li>
+      <li>
+        <p>If you haven't used GitHub before, <a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/GitHub-Copilot-Training.aspx" target="_blank">watch these training videos</a>.</p>
+        <p>Also familiarise yourself with <a href="https://nhs.sharepoint.com/:u:/r/sites/X26_EngineeringCOE/SitePages/Guidelines-When-Using-GitHub.aspx?csf=1&amp;web=1&amp;e=Etj3ie" target="_blank">Guidelines When Using GitHub</a>.</p>
+        <p>Further information on GitHub, including how to get access and set it up correctly is available at: <a href="https://prototype-kit.service-manual.nhs.uk/guides/github/" target="_blank">Store code online with GitHub - NHS prototype kit</a> or at <a href="https://nhs.sharepoint.com/:u:/r/sites/X26_EngineeringCOE/SitePages/TechRadar-SourceControl.aspx?csf=1&amp;web=1&amp;e=xhhDWX" target="_blank">Source Control</a>.</p>
+      </li>
+      <li>
+        <p>It is also useful to learn effective prompting to get AI to generate the results you need.</p>
+        <p><strong>Tip:</strong> You can use Microsoft Copilot and GitHub Copilot to support learning how to code and write good prompts (meta prompting).</p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Step-by-step approach to setting up GitHub Copilot environment</h2>
+    <ol>
+      <li>Start by creating a GitHub account with your @nhs.net email address.</li>
+      <li>Then request GitHub Organisational access (e.g. to NHS Digital, NHS.uk, NHS England Tools).</li>
+      <li>Then request a GitHub Copilot licence. See <a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/GitHub-User---how-to-request-access.aspx#how-to-request-access" target="_blank">GitHub Users</a> and the <a href="https://nhs.sharepoint.com/sites/X26_EngineeringCOE/SitePages/AI-Coding-Assistants---User-Guide.aspx" target="_blank">AI Coding Assistants - User Guide</a>. Contact the GitHub Admin team mailbox with the required information.</li>
+      <li>
+        <p>Next, install the required software. If you are on a Corporate Managed device, these are available in the Company Portal:</p>
+        <ul>
+          <li>X24 - Visual Studio Code</li>
+          <li>X24 - GIT for Windows</li>
+          <li>X24 - GitHub Desktop (version 3.4.+)</li>
+        </ul>
+      </li>
+      <li>
+        <p>NHS corporate managed device users need to create a “DevWspace” folder:</p>
+        <p><code>mkdir "C:\Users\SHORTCODE\OneDrive - NHS\DevWspace\"</code></p>
+        <p>Your projects and repositories must be stored inside the DevWspace folder. This is the only folder that allows scripts to run.</p>
+      </li>
+      <li>Then review the further steps on the Copilot Starter Pack guidance document: <a href="https://nhs.sharepoint.com/:b:/r/sites/X26_URPG/Shared%20Documents/AI/GH%20Copilot%20Enablement%20-%20NHS%20App%20Team/Copilot%20Starter%20Pack-v14-20260910_110842.pdf?csf=1&amp;web=1" target="_blank">Copilot Starter Pack-v14-20260910_110842</a></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Choosing which model to use</h2>
+    <p>GitHub Copilot supports a range of models (Anthropic/Microsoft/OpenAI), each with their own capabilities and risks.</p>
+    <p>Check GitHub guidance for <a href="https://docs.github.com/en/copilot/reference/ai-models/supported-models" target="_blank">Supported AI models in GitHub Copilot - GitHub Docs</a>.</p>
+    <p>If you are unsure where to start, use the “/model auto” setting, it is cheaper (discounted) and will usually select a suitable model for your task.</p>
+    <p>Claude models are often considered better for coding. However there is some personal preference, and models do change regularly.</p>
+  </section>
+
+  <section>
+    <h2>Additional software dependencies</h2>
+    <p>Depending on the tasks you plan to complete, you may need to install further software that integrates with VS Code.</p>
+    <ol>
+      <li>
+        <p>If you plan to use GitHub Copilot with the NHS Prototype Kit, install:</p>
+        <ul>
+          <li>X24 - NodeJS LTS (version 22+)</li>
+        </ul>
+      </li>
+      <li>
+        <p>If you plan to use GitHub Copilot for research data processing, install:</p>
+        <ul>
+          <li>X24 - Python (version 3.12+)</li>
+          <li>X24 - Visual Studio Code: Python Extension</li>
+          <li>X24 - Quarto (version 1.4+) - for publishing Markdown documents as HTML pages or GitHub sites</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Sandbox your Copilot</h2>
+    <p>This is advanced-user guidance only. Follow this if you need to run GitHub Copilot in a secure sandbox environment.</p>
+    <p>A sandbox prevents Copilot from accessing any files outside an isolated container. It helps prevent your system settings and files from accidentally being changed by an autonomous agent.</p>
+    <p>It can also be useful when testing locally installed frontier AI or language models, including in offline mode. However, the GitHub Copilot guidance says to use only approved LLMs. Do not run open-source, local or otherwise unapproved LLMs through tools such as Ollama or LM Studio.</p>
+    <p>Before starting, be aware that installing WSL, Docker and dev containers use a large amount of disk storage. Required packages can increase this by 20 GB or more. This setup is not recommended on an NHS corporate managed device because of limited storage and restrictions on managing these environments. Running out of disk space can cause your computer to crash. You may need to remove WSL or ask IT support for help with WSL disk optimisation or compression. See <a href="https://dev.to/asad_rajput_a2c67b9ede8c3/wsl2-disk-keeps-growing-heres-how-to-shrink-it-3j8c" target="_blank">WSL2 disk keeps growing? Here's how to shrink it - DEV Community</a>.</p>
+    <p>To set up a sandbox, follow these steps:</p>
+    <ol>
+      <li>Install Ubuntu on WSL (via PowerShell or Company Portal).</li>
+      <li>Install the Dev Containers extension in VS Code.</li>
+      <li>Within WSL, install Docker and test that it runs.</li>
+      <li>Test the end-to-end setup by cloning the “<a href="https://github.com/NHSDigital/UserResearchProjectTemplate" target="_blank">User Research Project Template</a>” from GitHub and opening it in a dev container. This should run an isolated environment with a mounted folder that preserves Copilot chat.</li>
+    </ol>
+  </section>
+
+{% endblock %}

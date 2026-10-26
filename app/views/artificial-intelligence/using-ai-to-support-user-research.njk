@@ -13,33 +13,30 @@
 {% block bodyContent %}
   <section>
     <h2>Introduction</h2>
-    <p>In August 2025, our guidance stated that no artificial intelligence (AI) tool was approved for processing participant data. This guidance has now been revised (November 2025) to align with more flexible approaches currently being adopted across other government departments. In February 2026, the user-research guidance has been broadened to combine with guidance for designers.</p>
+    <p>In August 2025, our guidance stated that no artificial intelligence (AI) tool was approved for processing participant data. This guidance was revised (November 2025) to align with more flexible approaches currently being adopted across other government departments. In February 2026, the user-research guidance has been broadened to combine with guidance for designers.</p>
     <p>As NHS England, we are committed to enabling professional growth through experimentation, but safety and safeguarding must always come first.</p>
-    <p>Although this guidance takes a more flexible stance, user researchers should always use AI tools with caution and adhere closely to the principles outlined here.</p>
+    <p>We have been evaluating a variety of AI tools during the last year, and in September 2026 we have released additional guidance on <a href="/artificial-intelligence/processing-research-data-with-ai-tools">Processing user research data with AI Tools</a>.</p>
+    <p>Despite the guidance and tools being relaxed further, a key principle remains the same:</p>
     <p><span style="color:red;">Researchers remain fully accountable for the accuracy and integrity of their analysis and reporting. Any errors or biases resulting from the misuse of generative AI are their responsibility.</span></p>
+    <p>A summary of key changes that apply to processing raw research data (updated September 2026):</p>
+    <ol>
+      <li>approved Microsoft tools may help create anonymised derivative research data;</li>
+      <li>humans MUST approve it;</li>
+      <li>Microsoft tools or GitHub Copilot can analyse human-approved anonymised derivative research data;</li>
+      <li>all final outputs must be human-reviewed before publication.</li>
+    </ol>
   </section>
 
   <section>
     <h2>Examples where using AI is NOT allowed for research purposes</h2>
     <ol>
       <li>
-        <p><strong>Do not input participant personal data into AI tools.</strong></p>
-        <p>This includes any information that could identify a participant or patient, such as:</p>
-        <ul>
-          <li>Video or audio recordings where a participant’s or patient’s voice is heard.</li>
-          <li>Photos where a participant’s face is visible.</li>
-          <li>Full, non-anonymised transcripts of research sessions containing participant data.</li>
-        </ul>
-        <p><i>Reason:</i> This protects privacy and complies with data protection laws (e.g., <a href="https://gdpr-info.eu/" target="_blank">GDPR</a>).</p>
-        <p>Given the restrictions above, we <strong>cannot use AI tools for transcription purposes</strong> because this would involve uploading raw video, audio (or other content types) that may contain personal identifiable data. You can still use Microsoft Teams’ built-in transcription feature, but these transcripts must be checked for accuracy and compliance.</p>
-      </li>
-      <li>
-        <p><strong>Do not input official or sensitive NHS England data into AI tools.</strong></p>
+        <p><strong>Do not input official or sensitive NHS England data into (non-corporate approved) AI tools.</strong></p>
         <ul>
           <li>Unannounced policies.</li>
           <li>Internal communications.</li>
         </ul>
-        <p><i>Reason:</i> This prevents disclosure of confidential information.</p>
+        <p><i>Reason:</i> This prevents disclosure of confidential information outside the organisation.</p>
       </li>
       <li>
         <p><strong>Do not use AI to simulate research participants (e.g. in interviews, usability testing, surveys, card sorting, AB testing, personas, etc.)</strong></p>
@@ -63,6 +60,7 @@
     <h2>Examples where AI is allowed for research purposes</h2>
     <p>What you can and cannot do with AI depends significantly on the task. In this section, we outline practical examples for two key stages: planning user research and analysing user research.</p>
     <p>Please read both carefully, as the rules differ. In particular, pay close attention to the guidance on analysis—this is where the highest risks lie, and not all uses are permitted. Performance will vary across different AI tools and tasks.</p>
+    <p>There is also new guidance on UR data storage and AI tools usage for user research: <a href="/artificial-intelligence/processing-research-data-with-ai-tools">Processing user research data with AI Tools</a>.</p>
 
     <article>
       <h3>Planning research</h3>
@@ -80,12 +78,10 @@
 
     <article>
       <h3>Analysing research</h3>
-      <p>Researchers are now permitted to use Microsoft 365 Copilot to assist with the analysis of user research data. Please ensure you are logged into Copilot using your NHS.net Connect account. This enterprise version of Copilot is not the same as the copilot you can access freely on your personal devices.</p>
-      <p>At this stage, Copilot should be used for experimentation only, and the vast majority of analysis must still be done manually by the researcher and/or other members of the UCD team. Treat AI outputs as first drafts or suggestions.</p>
+      <p>Researchers are now permitted to use Microsoft 365 Copilot to assist with the analysis of user research data, including personal data.</p>
+      <p>Please ensure you are logged into Copilot using your NHS.net Connect account. This enterprise version of Copilot is not the same as the copilot you can access freely on your personal devices.</p>
       <p><span style="color:red;">Copilot should never replace human judgment, do not use it for making decisions like which user needs are most important, or which features should we recommend. As an NHS England researcher, you remain fully accountable for the outputs of the research.</span></p>
 
-      <h4>Why Copilot and no other generative AI tools?</h4>
-      <p><span style="color:red;">Microsoft 365 Copilot (logged in using your NHS.net Connect account) is currently the only generative AI tool approved across NHS England for user research analysis purposes. To be sure that you are using the correct version of Copilot, check that you have a green shield at the top right hand side of your screen - this shows that you are protected.</span> This decision is based on reviews by Information Governance (IG), Cybersecurity, and Finance, ensuring compliance and security. Microsoft is committed to complying with privacy laws such as GDPR and privacy standards such as ISO/IEC 27018.</p>
       <p>More details on how Copilot works can be found on <a href="https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-architecture" target="_blank">Microsoft Learn.</a> In summary, when you use Microsoft 365 Copilot:</p>
       <ul>
         <li>Your data stays within the Microsoft 365 boundary.</li>
@@ -93,24 +89,16 @@
         <li>Prompts, responses and data accessed through Microsoft Graph aren’t used to train foundation LLMs.</li>
         <li>Microsoft 365 Copilot uses Azure OpenAI services for processing, not OpenAI’s publicly available services. Azure OpenAI doesn't cache customer content and Copilot modified prompts for Microsoft 365 Copilot.</li>
       </ul>
-      <p>While initial experiments comparing different AI tools suggest that Copilot may not always deliver the best analytical performance, it is the tool we have access to right now. We want to give researchers the freedom to start experimenting with Copilot, but this guidance may change as new tools are assessed and approved.</p>
-      <p>Please note different versions of Copilot exist across the organisation, which vary in their functionality and performance. Currently everyone in NHSE has access to Copilot Chat. Tech services are working towards rolling out the Copilot 365 desktop application to the whole of the organisation in the next few weeks.</p>
       <p>Before you start using Copilot please read the <a href="https://support.nhs.net/knowledge-base/m365-copilot-acceptable-use-policy/#2-document-information-and-downloads" target="_blank">M365 Copilot Acceptable Use Policy</a>.</p>
 
       <h4>How to use Copilot to assist with analysis?</h4>
       <p>You can use Copilot for analysis only with anonymised data and under the following conditions:</p>
       <ul>
-        <li><strong>Anonymisation</strong>
-          <ul>
-            <li>All transcripts must be anonymised by a human researcher before being uploaded into Copilot Chat.</li>
-            <li>Copilot Chat cannot be used to anonymise transcripts – this must be a manual process. For further information on how to anonymise, see the ‘How to anonymise transcripts’ section below.</li>
-            <li>Do not upload video or audio recordings of user research sessions into Copilot Chat.</li>
-          </ul>
-        </li>
         <li><strong>Review process</strong>
           <ul>
             <li>Researchers must review all outputs in full.</li>
             <li>Researchers should never rely on AI-generated outputs without checking them thoroughly.</li>
+            <li>For large survey data sets it may not be feasible for a researcher to check the output of the AI tool analysis. Therefore researchers should make an informed decision in the research planning stages whether the perceived benefits are worth it.</li>
             <li>Validate all findings, insights and quotes against the original data to ensure accuracy and context.</li>
             <li>Never publish any outputs that have been written 100% by AI tools.</li>
           </ul>
@@ -141,28 +129,24 @@
       <h4>You should be very cautious using AI for these parts of the research analysis process:</h4>
       <ul>
         <li><strong>Recommendations:</strong> Recommendations for product or service changes must be written by the researcher or UCD team members. Even if AI assisted with analysis, it may lack critical context and team knowledge. Writing recommendations is one of the most important responsibilities of a researcher—outsourcing this task would be highly risky.</li>
-        <li><strong>Personas:</strong> Unless the AI tool you are using can provide exact citations for the sources behind its insights, creating personas with it is risky because it becomes difficult to verify how they were generated and whether they embed biases.</li>
-      </ul>
+        <li><strong>Personas:</strong> Unless the AI tool you are using can provide exact citations for the sources behind its insights, creating personas with it is risky because it becomes difficult to verify         how they were generated and whether they embed biases. In general, views on the value of personas in user research are mixed. While some teams find them useful, others question their effectiveness.</li>
+              </ul>
+            </article>
+          </section>
 
-      <h4>How to anonymise transcripts?</h4>
-      <p>When anonymising transcripts, apply the appropriate level of anonymisation based on the risk of disclosure and the need to preserve data utility.</p>
-      <p>Avoid both over-anonymisation (removing too much detail, making data less useful) and under-anonymisation (leaving identifiable details that risk disclosure). Consider removing indirect identifiers: job titles, unique events or combinations of details that can reveal identity.</p>
-      <p><strong>Best practice for text-based data:</strong></p>
-      <ul>
-        <li>Make sure that you apply consistent anonymisation across all transcripts.</li>
-        <li>Clearly mark replacements (e.g., with [square brackets]).</li>
-        <li>Remember to keep a secure record of pseudonyms if needed for analysis. Any document that contains participant or patient personal information should be stored in a secure location.</li>
-      </ul>
-      <p><strong>Examples of anonymisation techniques (not exhaustive):</strong></p>
-      <ul>
-        <li>Replace a person’s name with a pseudonym, e.g., [Bob] or a descriptive tag, e.g., [farmer].</li>
-        <li>Replace geographical locations with a generic tag, e.g., [town in East of England] or [participant’s hometown].</li>
-        <li>Replace addresses, workplaces or dates of birth with tags, e.g., [address removed].</li>
-        <li>Remove or generalise unique identifiers such as job titles, rare conditions or specific events that could reveal identity.</li>
-      </ul>
-      <p>The <a href="https://ukdataservice.ac.uk/learning-hub/research-data-management/#anonymisation" target="_blank">UK Data Services learning hub</a> has some very comprehensive guidance on how to anonymise qualitative and quantitative data.</p>
-    </article>
-  </section>
+          <section>
+            <h2>Next read</h2>
+            <p><a href="/artificial-intelligence/processing-research-data-with-ai-tools">Processing research data with AI Tools</a></p>
+          </section>
 
+          <section>
+            <h2>More resources</h2>
+            <h3>Prompt Frameworks</h3>
+            <ul>
+              <li><a href="https://library.merseywestlancs.nhs.uk/ai-prompt-library" target="_blank">Library &amp; Knowledge Service - MWL | AI Prompt Library</a></li>
+              <li><a href="https://promptary.dev/frameworks/" target="_blank">20 Prompt Engineering Frameworks: Complete Guide (2026)</a></li>
+            </ul>
+            <p>AI for User Research: Current State and Key Limitations (Feb 2026)</p>
+          </section>
 
 {% endblock %}

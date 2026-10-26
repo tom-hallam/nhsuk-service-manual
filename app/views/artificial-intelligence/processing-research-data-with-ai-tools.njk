@@ -1,0 +1,425 @@
+{% extends "layouts/app-layout.njk" %}
+
+{% set pageTitle = "Processing research data with AI Tools" %}
+{% set pageSection = "Artificial intelligence" %}
+{% set pageUrl = "/artificial-intelligence/processing-research-data-with-ai-tools" %}
+{% set hideDescription = true %}
+{% set hideContact = "true" %}
+
+{% block beforeContent %}
+  {% include "artificial-intelligence/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+  <section>
+    <p>This page expands on <a href="/artificial-intelligence/using-ai-to-support-user-research">Using artificial intelligence to support user research</a> to support colleagues to work safely and ethically when processing research data.</p>
+    <h2>Key rules that apply to processing research data:</h2>
+    <ol>
+      <li>approved Microsoft tools may help create anonymised research data</li>
+      <li>a human must review and approve the anonymisation</li>
+      <li>Microsoft tools or GitHub Copilot can analyse human-approved anonymised research data</li>
+      <li>all final outputs must be human reviewed before publication</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Revised end-to-end research workflow</h2>
+    <figure>
+      <img src="/assets/ai/processing-research-data-with-ai-tools/research-data-workflow.png" alt="Recommended workflow for anonymisation, analysis and publication of user research data, in 7 steps. Steps 1 to 4 happen in approved Microsoft environments: store raw research data, AI-assisted anonymisation with approved Microsoft tools (M365 Copilot, Power Automate, Copilot Studio), mandatory human anonymisation review and sign-off, then store human-approved anonymised documents separately. Once anonymisation has been approved, choose an analysis route using the human-approved anonymised documents only: step 5, analysis supported by Microsoft AI tools, or step 6, analysis supported by GitHub Copilot Enterprise (optional). Step 7 is human validation and a publication check for evidence, privacy and accuracy.">
+    </figure>
+    <p>Approved Microsoft tools may process raw research data to support anonymisation. A human must review and approve the anonymisation before the data is used for analysis. Both analysis routes use human-approved anonymised documents only.</p>
+  </section>
+
+  <section id="store-raw-research-data">
+    <h2>1. Store raw research data in an approved Microsoft environment</h2>
+    <p>Raw transcripts, participant lists, survey exports, recordings, photographs and other identifiable research materials should remain in the approved NHS England storage environment, with access limited to authorised colleagues.</p>
+    <p>Approved environments include: SharePoint (restricted sites/folders), restricted Teams sites, Power Platform (e.g. Dataverse).</p>
+    <p>Using personal OneDrive to store research data is generally not recommended due to business continuity risks.</p>
+    <p>NHS England policy requires people to use approved ICT appropriate to the classification of the information and to manage records in accordance with records-management policy. See <a href="/artificial-intelligence/transparency-and-assurance">Transparency and assurance</a>.</p>
+  </section>
+
+  <section id="ai-assisted-anonymisation">
+    <h2>2. AI-assisted anonymisation with approved Microsoft tools</h2>
+    <p>Microsoft AI tools can be used to anonymise raw research data. An approved workflow may use:</p>
+    <ul>
+      <li>Microsoft 365 Copilot within NHS.net applications</li>
+      <li>Power Automate, including an approved AI Builder or document-processing workflow</li>
+      <li>Copilot Studio, where the use case has an approved NHS England environment, licence, connectors, data-loss-prevention configuration and governance</li>
+    </ul>
+    <p>See <a href="/artificial-intelligence/ai-tools">Artificial intelligence tools</a> for the list of approved tools.</p>
+
+    <h3>Anonymise transcripts</h3>
+    <p>When anonymising transcripts, apply the appropriate level of anonymisation based on the risk of disclosure and the need to preserve data utility.</p>
+    <p>Avoid both over-anonymisation (removing too much detail, making data less useful) and under-anonymisation (leaving identifiable details that risk disclosure). Remove indirect identifiers: job titles, unique events or other details when they might collectively reveal an identity.</p>
+    <p><strong>Best practice for text-based data:</strong></p>
+    <ul>
+      <li>Make sure that you apply consistent anonymisation across all transcripts</li>
+      <li>Clearly mark replacements (e.g., with [square brackets])</li>
+      <li>Remember to keep a secure record of pseudonyms if needed for analysis. Any document that contains participant or patient personal information should be stored in a secure location</li>
+    </ul>
+    <p><strong>Examples of anonymisation techniques (not exhaustive):</strong></p>
+    <ul>
+      <li>Replace a person’s name with a pseudonym, e.g., [Participant 1] or a descriptive tag, e.g., [farmer]</li>
+      <li>Replace geographical locations with a generic tag, e.g., [town in East of England] or [participant’s hometown]</li>
+      <li>Replace addresses, workplaces or dates of birth with tags, e.g., [address removed]</li>
+      <li>Remove or generalise unique identifiers such as job titles, rare conditions or specific events that could reveal identity</li>
+    </ul>
+    <p>The <a href="https://ukdataservice.ac.uk/learning-hub/research-data-management/#anonymisation" target="_blank">UK Data Services learning hub</a> has some very comprehensive guidance on how to anonymise qualitative and quantitative data.</p>
+    <p>See the <a href="https://nhs.sharepoint.com/sites/X26_URPG/Lists/UCD%20Prompt%20Library/AllItems.aspx" target="_blank">UCD Prompt Library</a> for examples of how to anonymise data.</p>
+  </section>
+
+  <section id="human-anonymisation-review">
+    <h2>3. Mandatory human anonymisation review and sign-off</h2>
+    <p>AI-assisted anonymisation must not be treated as complete automatically.</p>
+    <p>A human researcher <strong>MUST</strong> review and approve the anonymised output before it is used for analysis, synthesis, reporting, sharing, publication or transfer. The reviewer should check direct identifiers, indirect identifiers, metadata and combinations of information that could enable re-identification.</p>
+    <p>The Microsoft output is an anonymisation “candidate for review”, not automatically a safe anonymised dataset.</p>
+    <p>An accountable human researcher must verify that:</p>
+    <ul>
+      <li>direct identifiers have been removed or replaced</li>
+      <li>indirect identifiers and combinations of details have been assessed</li>
+      <li>pseudonym keys are not included</li>
+      <li>filenames, comments, document properties and embedded content do not reveal identity</li>
+      <li>useful research context has not been incorrectly removed</li>
+      <li>the approved anonymised document is clearly distinguished from the raw source</li>
+      <li>the review and approval are recorded</li>
+    </ul>
+    <p>This control reflects the AI guidance requirement that users validate AI output before using it and remain responsible for the final work product.</p>
+  </section>
+
+  <section id="store-anonymised-documents">
+    <h2>4. Store approved anonymised documents separately</h2>
+    <p>Only after human sign-off should the anonymised document be labelled or treated as suitable for:</p>
+    <ul>
+      <li>AI-supported analysis and synthesis</li>
+      <li>transfer to an approved GitHub repository</li>
+      <li>GitHub Copilot-supported coding or analysis</li>
+      <li>report drafting</li>
+      <li>wider internal sharing, subject to the intended audience and permissions</li>
+    </ul>
+    <p>The raw source remains subject to its existing access, retention and disposal arrangements. Prompts, responses and AI-created documents may themselves be corporate records and may be searchable or disclosable under subject-access or FOI processes.</p>
+    <p><strong>Raw participant material</strong>, for example raw transcripts, recordings, participant lists, identifiable survey data, photographs containing personal data, pseudonym keys or other identifiable or confidential research material, <strong>must not be used in the AI-analysis stage</strong>.</p>
+
+    <h3>Recommended environments and folder storage pattern</h3>
+    <h4>Approved Microsoft 365 research storage</h4>
+    <ol>
+      <li>Team restricted User Research area
+        <ul>
+          <li><code>/Raw</code> – restricted original research data</li>
+          <li><code>/Anon_Pending</code> – AI-assisted anonymisation candidates ready to be checked</li>
+        </ul>
+      </li>
+      <li>Wider team storage / UCD SharePoint
+        <ul>
+          <li><code>/Anon_Approved</code> – human-reviewed and signed-off anonymised research data</li>
+          <li><code>/Analysis</code></li>
+          <li><code>/Reporting</code></li>
+          <li><code>/Project docs</code></li>
+        </ul>
+      </li>
+    </ol>
+    <h4>Approved GitHub Enterprise (optional)</h4>
+    <ol start="3">
+      <li>Project GitHub repository
+        <ul>
+          <li><code>/Anon_Approved</code> – human-reviewed and signed-off anonymised research dataset</li>
+          <li><code>/Analysis scripts</code></li>
+          <li><code>/Tests</code></li>
+          <li><code>/Outputs</code></li>
+          <li><code>/Docs</code></li>
+          <li><code>.gitignore</code> – this file can exclude <code>/Anon_Approved</code> and <code>/Outputs</code> folders being uploaded to GitHub</li>
+        </ul>
+      </li>
+    </ol>
+    <p>Do not create <code>/Raw</code> or <code>/Anon_Pending</code> data folders inside a GitHub repository or within a workspace routinely exposed to GitHub Copilot.</p>
+  </section>
+
+  <section id="analysis-microsoft-ai-tools">
+    <h2>5. Analysis: supported by Microsoft AI tools</h2>
+    <p>Microsoft Copilot (Premium) is integrated within all Office 365 applications. There are a variety of use cases that are available to support researchers, and we encourage teams to share their process on the <a href="https://nhs.sharepoint.com/sites/X26_URPG/Lists/UCD%20Prompt%20Library/AllItems.aspx" target="_blank">UCD Prompt Library</a>.</p>
+    <p>Some examples of useful and safe tasks M365 tools can support with access to human-approved anonymised research data:</p>
+    <ul>
+      <li>Research planning, including supporting ethics and safeguarding reviews</li>
+      <li>Finding quotes and tagging metadata</li>
+      <li>Aggregating data across several interviews</li>
+      <li>Tagging and analysing quantitative data / survey responses</li>
+      <li>Writing analysis scripts</li>
+      <li>Supporting analysis in M365 products (e.g. Excel, Power BI, PowerPoint)</li>
+      <li>Summarising interviews / drafting text for reports</li>
+      <li>Creating personas / visualisations / workflow and process maps / infographics</li>
+      <li>Editing video and audio recordings, creating highlight reels (Clipchamp)</li>
+    </ul>
+
+    <h3>Examples of Microsoft 365 Copilot tasks</h3>
+    <p>Raw research data can be used where authorised and appropriate within the approved Microsoft environment. Analysis should use human-approved anonymised data.</p>
+    <ul>
+      <li>Review this raw interview transcript and create an anonymised version. Remove or replace direct and indirect identifiers while preserving information that is important to the research. Highlight anything you are uncertain about so I can review it before approving the anonymised version.</li>
+      <li>Review these human-approved anonymised interview transcripts. Identify recurring themes, differences between participants and supporting quotes. For every finding, show me which source transcript it came from so I can verify it.</li>
+      <li>Analyse this human-approved anonymised Excel survey dataset. Summarise the main patterns and differences between responses, identify anything unusual that I should investigate, and show the evidence supporting each observation.</li>
+      <li>Using these validated research findings, draft an executive summary for my research report. Clearly distinguish evidence from interpretation and do not introduce findings that are not present in the source material.</li>
+      <li>Turn these validated research findings into a PowerPoint presentation for stakeholders. Summarise the key user needs, evidence, implications and recommendations, and keep links to the supporting research where possible.</li>
+      <li>Compare the findings in these human-approved anonymised research reports and identify themes that appear across multiple studies. Show which reports support each theme and flag any contradictory evidence.</li>
+      <li>Review this draft research report before publication. Identify any information that could directly or indirectly identify a participant, any unsupported claims or quotations that need checking, and any content that may need a copyright or source check.</li>
+      <li>Summarise the validated findings from this research into a short update for the project team, including the strongest evidence, important limitations and the decisions that still require human judgement.</li>
+    </ul>
+  </section>
+
+  <section id="analysis-github-copilot">
+    <h2>6. Analysis: GitHub Copilot Enterprise (optional)</h2>
+    <p>GitHub Copilot may only be used through NHS England’s Enterprise GitHub arrangement and only with data that has already been anonymised and approved by a human reviewer. See <a href="/artificial-intelligence/get-started-with-github-copilot">Get started with GitHub Copilot</a>.</p>
+    <p>GitHub Copilot is primarily a coding agent (used in Visual Studio Code), however, it is also useful for long-running complex analysis, multi-step tasks and data summarisation.</p>
+    <p>It is similar to MS Copilot Researcher or Analyst Mode, however there is a wider choice of Large Language Models, and code is generated that can be reused, tested and validated. GitHub Copilot provides a flexible model where you can use different (OpenAI, Anthropic, or Microsoft) LLMs, it is a collaborative experience where the agent will request clarifications and agree next steps, and you can see the instructions explaining how the AI agent is processing your requests. By comparison, M365 Researcher/Copilot/Chat often complete data processing behind the scenes, and provide a finished artefact without explanations or justification.</p>
+    <p>To get started, clone: <a href="https://github.com/NHSDigital/UserResearchProjectTemplate" target="_blank">Template GitHub repository with example test data</a></p>
+
+    <h3>Examples of GitHub Copilot Enterprise tasks</h3>
+    <p>Use human-approved anonymised research data only.</p>
+    <ul>
+      <li>Review these 10 anonymised transcripts. For each transcript, identify themes and supporting quotes, then save the results into a structured CSV file so I can review them.</li>
+      <li>Create a reusable Python script to analyse my monthly anonymised survey feedback. Include data-quality checks, theme counts and a summary table, and document how the analysis works.</li>
+      <li>Help me design and build an API connector for Qualtrics that downloads my project data each month.</li>
+      <li>Build a locally hosted dashboard for this anonymised dataset using NHS design and accessibility standards. Include filters, charts and an option to export the underlying results.</li>
+      <li>Review this directory containing 30 research reports. Extract the user needs from each report using this definition of a user need: […]. Harmonise overlapping needs into a single set, retain links to the source evidence, and create a table that I can review and prioritise.</li>
+      <li>Review my Power Automate solution ZIP file, identify why the cloud flow is failing, suggest a fix, update the solution and show me how to test it before I re-import it.</li>
+      <li>Create a reproducible analysis pipeline that takes an approved anonymised CSV, cleans and validates the data, runs the agreed analysis and generates the same tables and charts each time.</li>
+      <li>Create an interactive visualisation that helps us explore relationships between these anonymised user needs, research themes and service areas. Keep the underlying analysis transparent so researchers can verify how each result was produced.</li>
+    </ul>
+
+    <h3>When using GitHub it is recommended to</h3>
+    <ul>
+      <li>Create projects in Organisation folders (<a href="https://github.com/orgs/NHSDigital/" target="_blank">NHS Digital</a>, <a href="https://github.com/orgs/nhs-england-tools/" target="_blank">NHS England Tools</a> or <a href="https://github.com/orgs/nhsuk/" target="_blank">NHS.UK</a>) when you are collaborating with colleagues</li>
+      <li>Ensure your GitHub Business/Enterprise account is logged in, so data is protected in line with the GitHub Copilot contract</li>
+    </ul>
+    <p>We have zero-data-retention arrangements for many generally available models, as well as restrictions preventing LLM providers training new models on NHS data (however there are some preview-specific exceptions).</p>
+
+    <h3>Appropriate user researcher uses include</h3>
+    <ul>
+      <li>writing or improving analysis scripts</li>
+      <li>developing repeatable analysis pipelines</li>
+      <li>testing transformations and data-quality checks</li>
+      <li>creating visualisations, prototypes or innovative outputs</li>
+      <li>automating repeatable processing</li>
+      <li>supporting report structures or drafting text</li>
+      <li>documenting and explaining code</li>
+    </ul>
+
+    <h3>GitHub Copilot must not</h3>
+    <ul>
+      <li>be used to anonymise data – we can’t share any personal identifiable data or Sensitive or Official Sensitive data in GitHub Copilot Enterprise</li>
+      <li>be treated as an autonomous researcher – replacing researcher judgement, evidence validation or interpretation</li>
+      <li>be used as a research repository / insight store library</li>
+      <li>be careless about which files you push into GitHub. Only push reusable code, docs and agents to GitHub</li>
+    </ul>
+    <p>Avoid pushing project data (research data and findings) into GitHub storage. A minimum approved anonymised dataset may be used for a task, but GitHub must not become the authoritative research repository. Research insights and artefacts <strong>MUST</strong> be stored and shared in SharePoint, Teams or Confluence folders and similar.</p>
+
+    <h3>GitHub Copilot limitations</h3>
+    <ul>
+      <li>GitHub Copilot doesn’t have access to Microsoft Graph (SharePoint, OneDrive and 365 apps) by default – data access needs approval by the user, on a per repository, file or folder basis</li>
+      <li>Data will be sent outside the UK (the US specifically, if using frontier OpenAI / Claude models)</li>
+    </ul>
+    <p>It is important to test different versions of prompts and different LLM models, as they will return different outputs. Again, we encourage teams to share their workflows on the <a href="https://nhs.sharepoint.com/sites/X26_URPG/Lists/UCD%20Prompt%20Library/AllItems.aspx" target="_blank">UCD Prompt Library</a>.</p>
+
+    <h3>Controls</h3>
+    <p>Below are controls teams can put in place to support security of research data and compliance with <a href="https://nhs.sharepoint.com/sites/X26_URPG/SitePages/ops/Information%20Governance%20%26%20Data%20Security%20.aspx" target="_blank">Information Governance</a> requirements.</p>
+    <figure>
+      <table>
+        <thead>
+          <tr>
+            <th>Control</th>
+            <th>Value</th>
+            <th>Position</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RAW and ANON_PENDING in M365</td>
+            <td>Makes workflow state clear while retaining raw data within the approved Microsoft boundary.</td>
+            <td>Recommended</td>
+          </tr>
+          <tr>
+            <td>ANON_APPROVED in M365</td>
+            <td>Creates a controlled hand-off point after human sign-off.</td>
+            <td>Recommended</td>
+          </tr>
+          <tr>
+            <td>Separate clean GitHub workspace</td>
+            <td>Minimises accidental attachment or agent access to unredacted raw material data by keeping working files separate from raw documents. A minimum approved anonymised dataset may be used for a task, but GitHub must not become the authoritative research repository.</td>
+            <td>Recommended</td>
+          </tr>
+          <tr>
+            <td>Use an isolated virtual machine</td>
+            <td>Running GitHub Copilot in a virtual machine (dev containers) can reduce risks around files being accessed outside the repository workspace.</td>
+            <td>Recommended</td>
+          </tr>
+          <tr>
+            <td>.gitignore for local temporary files</td>
+            <td>Useful repository hygiene, for example adding .gitignore exclusions for /ANON-APPROVED and /Outputs folders to prevent temporary research data being uploaded to GitHub.</td>
+            <td>Secondary control only</td>
+          </tr>
+          <tr>
+            <td>Copilot instruction “use only approved anonymised data”</td>
+            <td>Reinforces expected behaviour.</td>
+            <td>Useful but not a security boundary</td>
+          </tr>
+          <tr>
+            <td>GitHub content exclusion</td>
+            <td>Repository owners can prevent selected files from being used by some GitHub Copilot features. This provides an additional safeguard, but it should not be used to protect raw or identifiable research data.</td>
+            <td>Defence in depth only</td>
+          </tr>
+          <tr>
+            <td>RAW data inside GitHub repo plus .gitignore</td>
+            <td>Reduces accidental commits but does not prevent all development environments, agent or user access.</td>
+            <td>Not recommended</td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+    <p>To get started, clone: <a href="https://github.com/NHSDigital/UserResearchProjectTemplate" target="_blank">Template GitHub repository with example test data</a></p>
+  </section>
+
+  <section id="human-validation">
+    <h2>7. Human validation and publication check</h2>
+    <p>A researcher must validate AI-generated analysis, summaries, themes, quotations, calculations and interpretations against the original research evidence. Researchers remain accountable for themes, findings, recommendations and final outputs.</p>
+    <p>The NHS England guidance says trends and insights identified by AI tools must be verified and validated, and that AI-generated documents are a starting point rather than a finished product.</p>
+    <p>Before publication or wider distribution, conduct a separate check for:</p>
+    <ul>
+      <li>personal or confidential information</li>
+      <li>re-identification through quotations or combinations of details</li>
+      <li>accuracy and evidential support – i.e. check for hallucinations</li>
+      <li>appropriate source attribution – check references</li>
+      <li>copyright and other people’s content: before publishing AI-assisted work, check that you have permission to use any externally owned text, images, code, datasets or other material. Attribute sources where required and seek advice if you are unsure</li>
+      <li>accessibility and intended audience</li>
+      <li>appropriate disclosure of AI assistance</li>
+    </ul>
+
+    <h3>Examples of AI disclosure statements</h3>
+    <ul>
+      <li><strong>AI-assisted research:</strong> “Approved NHS England AI tools supported parts of the anonymisation, analysis and drafting process. Human researchers reviewed the anonymisation, validated findings against the research evidence and approved the final report.”</li>
+      <li><strong>Use of AI:</strong> “Microsoft 365 Copilot was used to support anonymisation and analysis of this research. GitHub Copilot Enterprise was used with human-approved anonymised data to support analysis scripts and visualisations. Researchers reviewed and validated all AI-assisted analysis, findings and outputs before publication.”</li>
+    </ul>
+  </section>
+
+  <section id="risks">
+    <h2>Risks</h2>
+    <p>Using AI throughout the whole research lifecycle may have benefits, but it also introduces a number of considerable risks. It is important for researchers and colleagues to be aware of these risks, apply necessary mitigations to ensure research data is protected and research quality standards are maintained.</p>
+    <figure>
+      <table>
+        <thead>
+          <tr>
+            <th>Risk ID</th>
+            <th>Risk area</th>
+            <th>Risk statement</th>
+            <th>Controls / mitigations</th>
+            <th>Owner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>UR01</td>
+            <td>Unapproved anonymisation tool</td>
+            <td>Raw participant data is submitted to a public, personal or otherwise unapproved tool, causing unauthorised disclosure.</td>
+            <td>Use only NHS England-approved Microsoft accounts, environments and workflows. Never use public AI for raw research data.</td>
+            <td>Researcher</td>
+          </tr>
+          <tr>
+            <td>UR02</td>
+            <td>Incomplete anonymisation</td>
+            <td>Microsoft 365 Copilot, Power Automate or Copilot Studio misses direct or indirect identifiers, causing identifiable data to be treated as anonymous.</td>
+            <td>Treat output as a candidate ready for review only. Require documented human review and sign-off before analysis, sharing or GitHub use.</td>
+            <td>Human reviewer</td>
+          </tr>
+          <tr>
+            <td>UR03</td>
+            <td>Over-anonymisation</td>
+            <td>AI removes context needed to understand accessibility needs, health experiences or service barriers, weakening research validity.</td>
+            <td>Compare the anonymised data with the source; restore necessary non-identifying context; preserve a protected source copy.</td>
+            <td>Researcher</td>
+          </tr>
+          <tr>
+            <td>UR04</td>
+            <td>Pseudonym-key disclosure</td>
+            <td>The anonymised dataset and re-identification key are stored together or moved into GitHub.</td>
+            <td>Store the key separately in approved Microsoft storage with restricted access. Never place it in GitHub.</td>
+            <td>Researcher</td>
+          </tr>
+          <tr>
+            <td>UR05</td>
+            <td>Raw data enters GitHub</td>
+            <td>A transcript, recording, participant list, identifiable survey export or photograph is committed or exposed to GitHub Copilot.</td>
+            <td>Raw data remains outside GitHub and GitHub workspaces. Permit only human-approved anonymised data. Conduct a pre-commit review.</td>
+            <td>Researcher</td>
+          </tr>
+          <tr>
+            <td>UR06</td>
+            <td>Metadata leakage</td>
+            <td>Names or confidential details remain in filenames, properties, comments, commit messages, branches, issues or repository history.</td>
+            <td>Include metadata in the anonymisation sign-off; use neutral filenames; review commits, issues and pull requests before pushing.</td>
+            <td>Researcher / repository owner</td>
+          </tr>
+          <tr>
+            <td>UR07</td>
+            <td>Inadequate repository access</td>
+            <td>A repository is public, placed in the wrong organisation or accessible to unnecessary users.</td>
+            <td>Use an approved NHS England GitHub organisation and enterprise account; apply private/internal visibility and least-privilege access; review collaborators.</td>
+            <td>Repository owner</td>
+          </tr>
+          <tr>
+            <td>UR08</td>
+            <td>Overseas GitHub processing</td>
+            <td>An anonymised document, prompt or output is processed through non-UK model infrastructure.</td>
+            <td>Use pre-anonymised data only; apply enterprise-approved GitHub models and features; do not represent Zero Data Retention as equivalent to UK processing.</td>
+            <td>GitHub administrators / AI user</td>
+          </tr>
+          <tr>
+            <td>UR09</td>
+            <td>Control overconfidence</td>
+            <td>Users assume .gitignore, Copilot instructions or content exclusion make raw data safe.</td>
+            <td>Treat these as defence-in-depth only. Physical separation and pre-anonymisation are the primary controls. GitHub notes that content exclusion does not cover every agent mode and may not prevent indirect semantic context reaching Copilot.</td>
+            <td>Repository owner</td>
+          </tr>
+          <tr>
+            <td>UR10</td>
+            <td>Analysis error or bias</td>
+            <td>AI invents, omits or overstates themes, quotations, sentiment or findings.</td>
+            <td>Validate material outputs against source evidence; require researcher interpretation and peer challenge; do not automate decisions about individuals.</td>
+            <td>Researcher</td>
+          </tr>
+          <tr>
+            <td>UR11</td>
+            <td>Unsafe generated code</td>
+            <td>GitHub Copilot creates faulty transformations, insecure code or an analysis pipeline that silently alters data.</td>
+            <td>Review, test and peer-review generated code; use known test cases or synthetic data; preserve reproducible steps and version history.</td>
+            <td>AI user / technical reviewer</td>
+          </tr>
+          <tr>
+            <td>UR12</td>
+            <td>Prompt and output handling</td>
+            <td>Prompts, anonymisation candidates or generated outputs are retained or shared without appropriate controls.</td>
+            <td>Treat them as records; store final approved outputs in the appropriate NHS repository; follow access, retention and disposal requirements.</td>
+            <td>AI user</td>
+          </tr>
+          <tr>
+            <td>UR13</td>
+            <td>Publication disclosure</td>
+            <td>A report, presentation, dashboard or repository contains personal data, identifiable quotations or confidential information.</td>
+            <td>Mandatory pre-publication privacy, evidence and audience check by a named human reviewer.</td>
+            <td>Report owner / team lead</td>
+          </tr>
+          <tr>
+            <td>UR14</td>
+            <td>Intellectual property</td>
+            <td>AI-generated text, visualisation or code reproduces protected content or introduces incompatible licensing.</td>
+            <td>Check sources and licences; attribute appropriately; escalate uncertainty. NHS guidance requires users to ensure AI output does not breach third-party IP rights.</td>
+            <td>Report owner / team lead</td>
+          </tr>
+          <tr>
+            <td>UR15</td>
+            <td>Over-reliance</td>
+            <td>Researchers delegate interpretation or recommendations to AI and lose familiarity with participant evidence.</td>
+            <td>AI supports, rather than replaces, researcher-led synthesis, judgement, recommendations and accountability.</td>
+            <td>Researcher / research lead</td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+  </section>
+
+{% endblock %}
