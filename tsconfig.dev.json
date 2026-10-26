@@ -13,6 +13,7 @@
     "./lib/**/*.test.mjs",
     "./.prettierrc.js",
     "./.stylelintrc.js",
+    "./scripts/**/*.mjs",
     "./*.config.js",
     "./*.config.mjs",
     "./*.setup.mjs"

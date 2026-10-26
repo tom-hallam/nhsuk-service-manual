@@ -21,6 +21,7 @@
     "lint:css:fix": "npm run lint:css -- --fix",
     "lint:types": "tsc --build tsconfig.json --pretty",
     "nuke": "npm run clean && rm -rf node_modules/",
+    "pdf:ai-hub": "node scripts/build-ai-hub-pdf.mjs",
     "start": "node .",
     "pretest": "npm run lint && npm run build",
     "test": "npm run test:js",
